@@ -1,0 +1,115 @@
+.rewiews {
+  margin-bottom: 200px;
+  .rewiews__container {
+    position: relative;
+    padding-top:120px;
+    .rewiews__strawberry{
+      position: absolute;
+      right:5px;
+      top:30px;
+    }
+    .rewiews__anyberry{
+      position:absolute;
+      bottom:-210px;
+      left:0;
+    }
+    .rewiews__head {
+      text-align: center;
+      font-weight: 700;
+      font-size: 48px;
+      color: #0d0d0d;
+      margin-bottom: 60px;
+    }
+
+    .rewiews-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .rewiew {
+        position: relative;
+        width: 940px;
+        height: 350px;
+        padding: 50px 0 40px 45px;
+        box-shadow: -10.6px 7.5px 30px 0 rgba(145, 169, 157, 0.17);
+        background-color: #f8faf9;
+        display: flex;
+        margin-bottom: 50px;
+        .rewiew__pattern{
+          position: absolute;
+          top:0;
+          right:0;
+        }
+        .rewiew__img-wrap {
+          margin-right: 20px;
+          .rewiew__img {
+            display: block;
+            width: 250px;
+            height: 260px;
+            background-image: url("../img/rewiew-img.png");
+          }
+        }
+
+        .rewiew__description {
+          width: 435px;
+          padding-top:15px;
+          .rewiew__head {
+            font-size: 30px;
+            font-weight: 500;
+            color: #323232;
+            margin-bottom: 30px;
+          }
+          .rewiew__text {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+          }
+          .rewiew__author {
+            font-size: 18px;
+            color: #666;
+          }
+        }
+      }
+      .rewiew-controls {
+        height:110px;
+        .rewiew-radio {
+          display: none;
+        }
+        .rewiew-controls__label:not(:last-child) {
+          margin-right: 40px;
+        }
+        .rewiew-controls__label {
+          position: relative;
+          padding-left: 100px;
+          cursor: pointer;
+        }
+
+        %rewiewControlsHolder {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          border: 10px solid #fff;
+        }
+
+        @each $rewiewControlsImg in(rewiew-1, rewiew-2, rewiew-3) {
+          .rewiew-controls__#{$rewiewControlsImg}:before {
+            @extend %rewiewControlsHolder;
+            background: url("../img/#{$rewiewControlsImg}.png")
+              center
+              center
+              no-repeat;
+          }
+        }
+
+        .rewiew-radio:checked + label:before {
+          border: 10px solid #0f5a47;
+        }
+      }
+    }
+  }
+}
