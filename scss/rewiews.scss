@@ -1,16 +1,19 @@
 .rewiews {
-  margin-bottom: 200px;
-  .rewiews__container {
+  .rewiews-content {
+    height:100%;
     position: relative;
-    padding-top:120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:120px 0 100px 0;
     .rewiews__strawberry{
       position: absolute;
       right:5px;
-      top:30px;
+      top:0px;
     }
     .rewiews__anyberry{
       position:absolute;
-      bottom:-210px;
+      bottom:-100px;
       left:0;
     }
     .rewiews__head {
