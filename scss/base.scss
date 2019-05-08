@@ -7,6 +7,8 @@ body,html{
     font-family:AlegreyaSans;
     font-weight: 400;
     font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -32,25 +34,27 @@ p{
 .wrapper{
     position: relative;
     width:100%;
-    min-width: 1050px;
     overflow: hidden;
 
     section{
     min-height:650px;
     height:100vh;
     position: relative;
+    
     }
 }
 
 .container{
-    width:940px;
+    width:1100px;
+    padding-left:80px;
+    padding-right:80px;
+    position: relative;
     height:100%;
     margin:0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
     margin-top:0;
@@ -65,3 +69,5 @@ button{
 img{
     max-width: 100%;
 }
+
+

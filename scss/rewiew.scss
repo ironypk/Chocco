@@ -1,0 +1,67 @@
+.rewiew {
+    position: relative;
+    width: 940px;
+    height: 350px;
+    padding: 50px 0 40px 45px;
+    
+    box-shadow: -10.6px 7.5px 30px 0 rgba(145, 169, 157, 0.17);
+    margin-bottom: 50px;
+
+    &::before{
+      content:"";
+      width: 130px;
+      height:170px;
+      position: absolute;
+      top:0;
+      right:0;
+      background:url('../img/rewiews__pattern.png');
+    }
+  }
+
+
+
+  .rewiew__item{
+      display:none;
+  }
+
+  .rewiew__item--active{
+      display:flex;
+  }
+  .rewiew__pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .rewiew__img-wrap {
+    margin-right: 20px;
+  }
+  .rewiew__img {
+    width: 250px;
+    height: 260px;
+    margin-right:20px
+  }
+
+  .rewiew__img img{
+    width:100%;
+    height:100%;
+  }
+  
+  .rewiew__description {
+    width: 435px;
+    padding-top: 15px;
+  }
+  .rewiew__head {
+    font-size: 30px;
+    font-weight: 500;
+    color: #323232;
+    margin-bottom: 30px;
+  }
+  .rewiew__text {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  .rewiew__author {
+    font-size: 18px;
+    color: #666;
+  }

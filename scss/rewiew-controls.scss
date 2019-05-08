@@ -1,0 +1,20 @@
+.rewiew-controls{
+    display:flex;
+    justify-content:center;
+}
+
+
+.rewiew-controls__item{
+    margin-right:40px;
+    cursor: pointer;
+}
+
+.rewiew-controls__item img{
+    border-radius:50%;
+}
+
+.rewiew-controls--active img,
+.rewiew-controls__item:hover img {
+    box-shadow: 0 0 0 7px #0f5a47;
+    transition:0.3s;
+}

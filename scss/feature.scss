@@ -7,7 +7,7 @@
 .feature__raspeberry {
   position: absolute;
   left: 0;
-  bottom: -100px;
+  bottom: -140px;
 }
 
 .feature__head-block {
@@ -15,15 +15,11 @@
   margin-bottom: 85px;
 }
 
-.feature__head {
-  font-weight: 700;
-  font-size: 48px;
+.feature__title {
   margin-bottom: 20px;
-  color: #0d0d0d;
 }
 
-.feature__text {
-  width:400px;
+.feature__head-block p {
   font-size: 18px;
   color: #666;
   
@@ -47,14 +43,14 @@
 .feature__img {
   margin-bottom: 65px;
 }
-.feature__title {
+.feature__item h3 {
   font-size: 27px;
   font-weight: 700;
   color: #000;
   margin-bottom: 30px;
 }
 
-.feature__discription {
+.feature__item p{
   font-size: 18px;
   font-weight: 300;
   color: #666;
