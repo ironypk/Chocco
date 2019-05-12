@@ -54,6 +54,7 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index:1000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -70,4 +71,10 @@ img{
     max-width: 100%;
 }
 
+
+.section-title {
+    font-weight: 700;
+    font-size: 48px;
+    color: #0d0d0d;
+  }
 

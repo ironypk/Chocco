@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: AlegreyaSans;
   src: url(../fonts/AlegreyaSans-Black.woff2);
@@ -130,7 +131,8 @@ p {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 1000; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -142,40 +144,39 @@ button {
 img {
   max-width: 100%; }
 
+.section-title {
+  font-weight: 700;
+  font-size: 48px;
+  color: #0d0d0d; }
+
 .introduction {
-  background-color: #61c4d9;
-  padding-bottom: 50px; }
+  background-color: #61c4d9; }
 
 .introduction__container {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-.introduction__leaf,
-.introduction__chocco,
-.introduction__pattern,
-.introduction__berry {
-  position: absolute; }
-
-.introduction__pattern {
-  right: 0;
-  bottom: -54px;
-  z-index: 0; }
-
-.introduction__chocco {
-  right: 30px;
-  bottom: 10px;
-  z-index: 50; }
-
-.introduction__leaf {
-  bottom: -105px;
-  right: 20px;
-  z-index: 100; }
-
-.introduction__berry {
-  bottom: -95px;
-  right: 90px;
-  z-index: 150; }
+  justify-content: space-between;
+  padding-bottom: 50px;
+  background: url("../img/узор.png") center center no-repeat;
+  background-position: right bottom; }
+  .introduction__container::after {
+    content: "";
+    width: 503px;
+    height: 650px;
+    position: absolute;
+    background: url("../img/Батончики.png") center 10px no-repeat, url("../img/introduction__berry.png") center 360px no-repeat;
+    right: 30px;
+    bottom: -50px;
+    z-index: -50; }
+  .introduction__container::before {
+    content: "";
+    width: 1056px;
+    height: 353px;
+    position: absolute;
+    background: url("../img/листья.png") center center no-repeat;
+    right: 15px;
+    bottom: -50px;
+    z-index: -100; }
 
 .header {
   padding-top: 25px;
@@ -274,11 +275,6 @@ img {
 .product-features__img {
   margin-right: 7px; }
 
-.section-title {
-  font-weight: 700;
-  font-size: 48px;
-  color: #0d0d0d; }
-
 .feature {
   text-align: center; }
 
@@ -286,11 +282,14 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-
-.feature__raspeberry {
-  position: absolute;
-  left: 0;
-  bottom: -140px; }
+  .feature__container::after {
+    content: "";
+    width: 161px;
+    height: 225px;
+    position: absolute;
+    background: url(../img/raspeberry.png) center -90px no-repeat;
+    left: 0;
+    bottom: -150px; }
 
 .feature__head-block {
   width: 400px;
@@ -348,16 +347,22 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-
-.rewiews__strawberry {
-  position: absolute;
-  right: 5px;
-  top: 0px; }
-
-.rewiews__anyberry {
-  position: absolute;
-  bottom: -100px;
-  left: 0; }
+  .rewiews__container::after {
+    content: "";
+    position: absolute;
+    background: url("../img/rewiews__strawberry.png") center center no-repeat;
+    width: 173px;
+    height: 99px;
+    top: -80px;
+    right: 0; }
+  .rewiews__container::before {
+    content: "";
+    position: absolute;
+    background: url("../img/rewiews__anyberry.png") center center no-repeat;
+    width: 154px;
+    height: 200px;
+    bottom: -180px;
+    left: 0; }
 
 .rewiew {
   position: relative;

@@ -1,17 +1,22 @@
 .feature {
   text-align: center;
 }
-.feature__container{
-  align-items:center;
-}
-.feature__raspeberry {
-  position: absolute;
-  left: 0;
-  bottom: -140px;
+.feature__container {
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 161px;
+    height: 225px;
+    position: absolute;
+    background: url(../img/raspeberry.png) center -90px no-repeat;
+    left: 0;
+    bottom: -150px;
+  }
 }
 
 .feature__head-block {
-  width:400px;
+  width: 400px;
   margin-bottom: 85px;
 }
 
@@ -22,7 +27,6 @@
 .feature__head-block p {
   font-size: 18px;
   color: #666;
-  
 }
 
 .feature__list {
@@ -50,7 +54,7 @@
   margin-bottom: 30px;
 }
 
-.feature__item p{
+.feature__item p {
   font-size: 18px;
   font-weight: 300;
   color: #666;

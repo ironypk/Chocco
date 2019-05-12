@@ -1,43 +1,33 @@
 .introduction {
   background-color: #61c4d9;
-  padding-bottom:50px;
 }
 
-.introduction__container{
+.introduction__container {
   justify-content: space-between;
-}
+  padding-bottom: 50px;
+  background: url("../img/узор.png") center center no-repeat;
+  background-position: right bottom;
 
+  &::after {
+    content: "";
+    width: 503px;
+    height: 650px;
+    position: absolute;
+    background: url("../img/Батончики.png") center 10px no-repeat,
+      url("../img/introduction__berry.png") center 360px no-repeat;
+    right: 30px;
+    bottom: -50px;
+    z-index: -50;
+  }
 
-
-.introduction__leaf,
-.introduction__chocco,
-.introduction__pattern,
-.introduction__berry {
-  position: absolute;
-}
-
-.introduction__pattern {
-  right: 0;
-  bottom:-54px;
-  z-index: 0;
-}
-
-.introduction__chocco {
-  right: 30px;
-  bottom: 10px;
-  z-index: 50;
-}
-
-
-.introduction__leaf{
-  bottom: -105px;
-  right: 20px;
-  z-index: 100;
-}
-
-
-.introduction__berry {
-  bottom: -95px;
-  right: 90px;
-  z-index: 150;
+  &::before {
+    content: "";
+    width: 1056px;
+    height: 353px;
+    position: absolute;
+    background: url("../img/листья.png") center center no-repeat;
+    right: 15px;
+    bottom: -50px;
+    z-index: -100;
+  }
 }
