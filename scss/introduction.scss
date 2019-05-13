@@ -1,23 +1,21 @@
 .introduction {
-  background-color: #61c4d9;
+  background:url("../img/узор.png") right bottom no-repeat;
+  background-color:#61c4d9;
 }
 
 .introduction__container {
   justify-content: space-between;
   padding-bottom: 50px;
-  background: url("../img/узор.png") center center no-repeat;
-  background-position: right bottom;
 
   &::after {
     content: "";
     width: 503px;
     height: 650px;
     position: absolute;
-    background: url("../img/Батончики.png") center 10px no-repeat,
-      url("../img/introduction__berry.png") center 360px no-repeat;
+    background:url("../img/introduction__berry.png") center 360px no-repeat;
     right: 30px;
     bottom: -50px;
-    z-index: -50;
+    z-index: -100;
   }
 
   &::before {
@@ -30,4 +28,12 @@
     bottom: -50px;
     z-index: -100;
   }
+}
+
+
+.introduction__chocco{
+  position: absolute;
+  right:25px;;
+  bottom:60px;
+  z-index:-200;
 }

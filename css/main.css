@@ -150,24 +150,23 @@ img {
   color: #0d0d0d; }
 
 .introduction {
+  background: url("../img/узор.png") right bottom no-repeat;
   background-color: #61c4d9; }
 
 .introduction__container {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-bottom: 50px;
-  background: url("../img/узор.png") center center no-repeat;
-  background-position: right bottom; }
+  padding-bottom: 50px; }
   .introduction__container::after {
     content: "";
     width: 503px;
     height: 650px;
     position: absolute;
-    background: url("../img/Батончики.png") center 10px no-repeat, url("../img/introduction__berry.png") center 360px no-repeat;
+    background: url("../img/introduction__berry.png") center 360px no-repeat;
     right: 30px;
     bottom: -50px;
-    z-index: -50; }
+    z-index: -100; }
   .introduction__container::before {
     content: "";
     width: 1056px;
@@ -177,6 +176,12 @@ img {
     right: 15px;
     bottom: -50px;
     z-index: -100; }
+
+.introduction__chocco {
+  position: absolute;
+  right: 25px;
+  bottom: 60px;
+  z-index: -200; }
 
 .header {
   padding-top: 25px;
@@ -277,12 +282,7 @@ img {
 
 .feature {
   text-align: center; }
-
-.feature__container {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .feature__container::after {
+  .feature::after {
     content: "";
     width: 161px;
     height: 225px;
@@ -290,6 +290,11 @@ img {
     background: url(../img/raspeberry.png) center -90px no-repeat;
     left: 0;
     bottom: -150px; }
+
+.feature__container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .feature__head-block {
   width: 400px;
@@ -339,22 +344,19 @@ img {
   font-weight: 300;
   color: #666; }
 
-.rewiews__title {
-  text-align: center;
-  margin-bottom: 60px; }
+.rewiews::after {
+  content: "";
+  position: absolute;
+  background: url("../img/rewiews__strawberry.png") center center no-repeat;
+  width: 173px;
+  height: 99px;
+  top: -80px;
+  right: 0; }
 
 .rewiews__container {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .rewiews__container::after {
-    content: "";
-    position: absolute;
-    background: url("../img/rewiews__strawberry.png") center center no-repeat;
-    width: 173px;
-    height: 99px;
-    top: -80px;
-    right: 0; }
   .rewiews__container::before {
     content: "";
     position: absolute;
@@ -363,6 +365,10 @@ img {
     height: 200px;
     bottom: -180px;
     left: 0; }
+
+.rewiews__title {
+  text-align: center;
+  margin-bottom: 60px; }
 
 .rewiew {
   position: relative;

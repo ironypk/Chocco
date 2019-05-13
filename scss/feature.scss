@@ -1,9 +1,5 @@
 .feature {
   text-align: center;
-}
-.feature__container {
-  align-items: center;
-
   &::after {
     content: "";
     width: 161px;
@@ -13,6 +9,9 @@
     left: 0;
     bottom: -150px;
   }
+}
+.feature__container {
+  align-items: center;
 }
 
 .feature__head-block {

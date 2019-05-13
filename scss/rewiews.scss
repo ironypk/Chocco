@@ -1,29 +1,30 @@
+.rewiews {
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("../img/rewiews__strawberry.png") center center no-repeat;
+    width: 173px;
+    height: 99px;
+    top: -80px;
+    right: 0;
+  }
+}
+
+.rewiews__container {
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../img/rewiews__anyberry.png") center center no-repeat;
+    width: 154px;
+    height: 200px;
+    bottom: -180px;
+    left: 0;
+  }
+}
+
 .rewiews__title {
   text-align: center;
   margin-bottom: 60px;
 }
-
-.rewiews__container{
-  align-items: center;
-
-  &::after{
-    content:"";
-    position: absolute;
-    background: url('../img/rewiews__strawberry.png') center center no-repeat;
-    width:173px;
-    height:99px;
-    top:-80px;
-    right:0;
-  }
-
-  &::before{
-    content:"";
-    position: absolute;
-    background: url('../img/rewiews__anyberry.png') center center no-repeat;
-    width:154px;
-    height:200px;
-    bottom:-180px;
-    left:0;
-  }
-}
-
