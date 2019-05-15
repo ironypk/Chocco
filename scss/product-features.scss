@@ -1,0 +1,18 @@
+.product-features {
+    display: flex;
+  }
+  .product-features__item {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 140px;
+    font-size: 16px;
+    color: #fff;
+  }
+  .product-features__item:not(:last-child) {
+    margin-right:50px;
+  }
+  
+  .product-features__img{
+    margin-right:7px;
+  }

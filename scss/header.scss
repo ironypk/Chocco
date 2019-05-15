@@ -1,0 +1,52 @@
+.header {
+    padding-top: 25px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .logo {
+    width:55px;
+    word-wrap: break-word;
+    color: #fff;
+    font-family: MuseoSansCyrl;
+    font-size: 24px;
+    line-height: 0.88;
+    margin-right: 25px;
+  }
+
+  .navbar {
+    margin-right: 45px;
+    z-index: 500;
+  }
+  .navbar__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar__item:not(:last-child){
+    margin-right:30px;
+  }
+  
+  .navbar__link {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .phone {
+    position: relative;
+    font-size: 24px;
+    color: #fff;
+    z-index: 500;
+  
+    &:before {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: url("../img/phone.png") center center no-repeat;
+      top: 7px;
+      left: -20px;
+    }
+  }
