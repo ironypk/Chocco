@@ -1,5 +1,5 @@
 .introduction {
-  background:url("../img/узор.png") right bottom no-repeat;
+  background:url("../img/introduction__pattern.png") right bottom no-repeat;
   background-color:#61c4d9;
 }
 
@@ -23,10 +23,10 @@
     width: 1056px;
     height: 353px;
     position: absolute;
-    background: url("../img/листья.png") center center no-repeat;
+    background: url("../img/introduction__leaf.png") center center no-repeat;
     right: 15px;
     bottom: -50px;
-    z-index: -100;
+    z-index:100;
   }
 }
 
@@ -35,5 +35,4 @@
   position: absolute;
   right:25px;;
   bottom:60px;
-  z-index:-200;
 }

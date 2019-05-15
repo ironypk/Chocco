@@ -1,0 +1,77 @@
+.map__img{
+    position: relative;
+    width:100%;
+    height:100%;
+}
+.map__pic{
+    width:inherit;
+    height: inherit;
+}
+
+.mark{
+    top:50px;
+    left:50px;
+    background-color: #0f5a47;
+    position: absolute;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    border-radius:50% 50% 0 50%;
+    transform:rotate(44deg);
+}
+
+.mark span{
+    display:block;
+    transform:rotate(-44deg);
+}
+
+.footer{
+    width:100%;
+    background-color:#fff;
+    position:absolute;
+    height:90px;
+    bottom:0;
+}
+
+.footer__container{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.location{
+    font-size: 21px;
+    color: #010101;
+}
+
+.footer__phone-wrapper{
+    margin-left:20px;
+}
+
+.footer-phone__img{
+    fill:#0f5a47;
+}
+
+.footer__phone{
+    color:#0f5a47;
+}
+
+.social{
+    display:flex;
+}
+
+.social__item:not(:last-child){
+    margin-right:20px;
+}
+
+.social__link svg{
+    width:25px;
+    height:25px;
+    opacity:.5;
+}
+
+.social__link:hover svg{
+    opacity:1;
+}
+
+

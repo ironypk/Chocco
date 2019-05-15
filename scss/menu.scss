@@ -1,0 +1,110 @@
+.menu{
+    background-image: url('../img/menu__back.png');
+    background-size: cover;
+    background-color:black;
+    &::after {
+        content: "";
+        width: 104px;
+        height: 114px;
+        position: absolute;
+        background: url(../img/menu__raspeberry.png) center center no-repeat;
+        left: 30px;
+        top: -70px;
+      }
+}
+
+
+.menu__container{
+    position: static;
+    justify-content: flex-start;
+    padding-top:100px;
+}
+
+.menu__title{
+    color:white;
+}
+
+.menu__list{
+    display:flex;
+    position:absolute;
+    right:0;
+    top:0;
+    height:100%;
+}
+
+
+.menu__item{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    width:100px;
+    height:inherit;
+    background-size: cover;
+}
+
+
+.menu__item--active{
+    width:630px;
+}
+
+.menu__accordion{
+    display:none;
+}
+
+.menu__item--active .menu__accordion{
+    width:530px;
+    height:100%;
+    right:0;
+    display: flex;
+    position:absolute;
+    padding:55px 130px 55px 30px;
+    background-color: rgba(#000, 0.7);
+    z-index:500;
+}
+
+
+
+.menu__accordion p{
+    text-align:justify;
+    font-size: 16px;
+    color:#fff;
+    line-height: 1.5;
+}
+
+.menu__block{
+    min-width:100px;
+    background-size:100% 100%;
+    background-color:black;
+    color:#fff;
+    font-size:48px;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    padding-bottom:50px;
+    cursor:pointer;
+}
+
+.menu__block span{
+    display:block;
+    bottom:0;
+    font-weight:500;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);    
+}
+
+
+.menu__milk{
+    background-image: url('../img/menu__milk.png');
+}
+
+.menu__fruits{
+
+    background-image:url('../img/menu__fruits.png');
+
+}
+
+.menu__berry{
+    background-image: url('../img/menu__berry.png');
+ 
+}

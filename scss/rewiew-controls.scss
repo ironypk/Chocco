@@ -5,8 +5,11 @@
 
 
 .rewiew-controls__item{
-    margin-right:40px;
     cursor: pointer;
+}
+
+.rewiew-controls__item:not(:last-child){
+    margin-right:40px;
 }
 
 .rewiew-controls__item img{

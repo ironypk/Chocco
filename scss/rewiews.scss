@@ -1,25 +1,28 @@
 .rewiews {
+  padding-top:120px;
+  padding-bottom:90px;
   &::after {
     content: "";
     position: absolute;
     background: url("../img/rewiews__strawberry.png") center center no-repeat;
     width: 173px;
     height: 99px;
-    top: -80px;
-    right: 0;
+    top:20px;
+    right:0;
   }
 }
 
 .rewiews__container {
-  align-items: center;
+  align-items:center;
+
 
   &::before {
     content: "";
     position: absolute;
     background: url("../img/rewiews__anyberry.png") center center no-repeat;
     width: 154px;
-    height: 200px;
-    bottom: -180px;
+    height: 224px;
+    bottom: -110px;
     left: 0;
   }
 }

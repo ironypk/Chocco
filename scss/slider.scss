@@ -1,0 +1,139 @@
+.slider {
+  margin-bottom:100px;
+  &::after{
+      content:"";
+      width:135px;
+      height:112px;
+      position: absolute;
+      right:0;
+      bottom:-30px;
+      background: url('../img/slider__berry.png') center center no-repeat;
+  }
+}
+
+.slider-container {
+  align-items: center;
+}
+
+
+.slider__arrow{
+  width:30px;
+  height:30px;
+  position: absolute;
+  top:50%;
+  border-left:3px solid black;
+  border-bottom:3px solid black;
+  border-bottom-left-radius: 6px;
+  cursor: pointer;
+  
+  
+}
+
+.arrow-left{
+  left:30px;
+  transform: rotate(45deg)
+}
+
+.arrow-right{
+  right:30px;
+  transform: rotate(-135deg)
+}
+
+.slider__item {
+  display: none;
+  position: relative;
+}
+
+.slider__item--active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__img {
+  margin-right: 90px;
+  position: relative;
+}
+
+.slider__img::after {
+  content: "";
+  position: absolute;
+  width: 462px;
+  height: 326px;
+  background: url("../img/slider__leaf.png") center center no-repeat;
+  z-index: -100;
+  left: -60px;
+  bottom: -20px;
+}
+
+.seaweed-img {
+  width: 380px;
+  height: 309px;
+  background: url("../img/seaweed__back.png") center center no-repeat;
+}
+
+.seaweed-img img {
+  position: relative;
+  top: -74px;
+  left: -9px;
+}
+
+.slider__description {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__description h3 {
+  font-size: 36px;
+  color: #0d0d0d;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.slider__description .composition {
+  font-size: 24px;
+  font-weight: 500;
+  color: #323232;
+  margin-bottom: 30px;
+}
+
+.slider__description p {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 50px;
+}
+
+.nutritional-value {
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.nutritional-value__item div:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.nutritional-value__item div:last-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.nutritional-value__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.slider__btn-wrapper {
+  display: flex;
+}
+
+.slider__btn-wrapper div {
+  font-size: 60px;
+  font-weight: 300;
+  color: #0d0d0d;
+  margin-right: 30px;
+}
+
+.slider__btn {
+  color: #fff;
+  background-color: #0f5a47;
+}
