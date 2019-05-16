@@ -1,0 +1,249 @@
+.form {
+  background-image: url("../img/form__back.png");
+  font-size: 18px;
+  color: #0f5a47;
+  font-weight: 500;
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("../img/form__bush.png") center center no-repeat;
+    width: 260px;
+    height: 280px;
+    top:-130px;
+    right:0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../img/form__leaf.png") center center no-repeat;
+    width:135px;
+    height: 188px;
+    bottom:107px;
+    right:0;
+  }
+}
+
+.form__container{
+    position: static;
+    align-items: center;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../img/form__berry.png") center center no-repeat;
+      width:63px;
+      height: 58px;
+      bottom:56px;
+      left:12px;
+    }
+}
+
+.form-title{
+    color: #0f5a47;
+    margin-bottom:77px;
+}
+
+.form-wrapper {
+  display: flex;
+}
+
+.form__block:not(:last-child) {
+  margin-right: 20px;
+}
+
+.form-data {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(3, 60px);
+  grid-template-areas:
+    "name name  tel tel"
+    "street street street street"
+    "dom corp flat floor";
+  grid-row-gap: 42px;
+  grid-column-gap: 20px;
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__tel {
+    grid-area: tel;
+  }
+
+  &__street {
+    grid-area: street;
+  }
+  &__dom {
+    grid-area: dom;
+  }
+
+  &__corp {
+    grid-area: corp;
+  }
+
+  &__flat {
+  }
+  grid-area: flat;
+
+  &__floor {
+    grid-area: floor;
+  }
+}
+
+.form__item {
+    position:relative;
+}
+
+.form__label {
+    position: absolute;
+    top:-22px;
+    left:0;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form__input {
+  font-size: 700;
+  width: 100%;
+  height: 60px;
+  padding-left: 10px;
+  font-size: 18px;
+  color: #000;
+  border: none;
+}
+
+.form__input:focus {
+  outline: 3px solid #dde3bd;
+}
+
+/*----------------Правая часть формы------------------*/
+
+.form__comments {
+  margin-bottom: 20px;
+}
+
+.form__comments textarea {
+  padding-top: 10px;
+  width: 100%;
+  width: 460px;
+  height: 180px;
+  resize: none;
+}
+
+/* -----------------RADIO BUTTON-----------------*/
+
+.form-controls {
+  display: flex;
+  margin-bottom: 10px;
+}
+.radio {
+  display: none;
+}
+
+.radio + label {
+  position: relative;
+  padding: 5px 0 0 35px;
+  cursor: pointer;
+}
+.radio + label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+}
+.radio + label:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0f5a47;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.radio:checked + label,
+.radio:checked + label:after,
+.radio:checked + label:before {
+  opacity: 1;
+}
+
+.form-controls__label:nth-of-type(1) {
+  margin-right: 20px;
+}
+
+/*-------------CheckBOX-----------*/
+
+
+.check-wrap{
+    display: flex;
+    align-items: center;
+    margin-bottom:40px;
+}
+.check-wrap input {
+    display: none;
+  } 
+
+.check-input + label{
+    display:block;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-checkbox {
+  background-color: #fff;
+  width: 26px;
+  height: 26px;
+  margin-right:9px;
+  
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    background-color: #0f5a47;
+    opacity: 0;
+  }
+
+  &:before {
+    width: 7px;
+    height: 3px;
+    left: 7px;
+    bottom: 10px;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    width: 11px;
+    height: 3px;
+    left: 10px;
+    bottom: 12px;
+    transform: rotate(-48deg);
+  }
+}
+
+.check-input:checked + label,
+.check-input:checked + label:before,
+.check-input:checked + label:after {
+  opacity: 1;
+}
+
+.form__btn{
+    margin-right:30px;
+}
+
+.form__cleaner{
+    border:none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #0f5a47;
+    font-size: 18px;
+    font-weight: 500;
+}
+
