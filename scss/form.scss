@@ -1,148 +1,169 @@
 .form {
+  display:flex;
+  align-items: center;
   background-image: url("../img/form__back.png");
-  font-size: 18px;
+  font-size: rem(18px);
   color: #0f5a47;
   font-weight: 500;
+  @include cover;
+  
   &::after {
     content: "";
     position: absolute;
-    background: url("../img/form__bush.png") center center no-repeat;
-    width: 260px;
-    height: 280px;
-    top:-130px;
+    background: url("../img/form__bush.png");
+    width: rem(260px);
+    height: rem(280px);
+    top:rem(-130px);
     right:0;
+    @include cover;
   }
 
   &::before {
     content: "";
     position: absolute;
-    background: url("../img/form__leaf.png") center center no-repeat;
-    width:135px;
-    height: 188px;
-    bottom:107px;
+    background: url("../img/form__leaf.png");
+    width:rem(135px);
+    height: rem(188px);
+    bottom:rem(107px);
     right:0;
+    @include cover;
   }
 }
 
 .form__container{
+    padding-top:rem(100px);
+    padding-bottom:rem(85px);
     position: static;
     align-items: center;
     &::before {
       content: "";
       position: absolute;
-      background: url("../img/form__berry.png") center center no-repeat;
-      width:63px;
-      height: 58px;
-      bottom:56px;
-      left:12px;
+      background: url("../img/form__berry.png");
+      width:rem(63px);
+      height: rem(58px);
+      bottom:rem(56px);
+      left:rem(12px);
+      @include cover;
     }
 }
 
 .form-title{
     color: #0f5a47;
-    margin-bottom:77px;
+    margin-bottom:rem(77px);
 }
 
-.form-wrapper {
+.form-wrapper{
+
+  @include tablets{
+    padding:0 20%;
+  }
+
+  @include phones{
+    padding:0;
+  }
+
+}
+
+
+.form__block{
+  float:left;
+  width:45%;
+
+  @include tablets{
+    float:none;
+    width:100%;
+  }
+}
+
+/*----------------Левая часть формы------------------*/
+
+
+.form-wrapper__left{
+  margin-right:rem(20px);
+
+  @include tablets{
+    margin-right:0;
+  }
+}
+
+
+.form__block-row{
   display: flex;
 }
 
-.form__block:not(:last-child) {
-  margin-right: 20px;
+.form__block-row:not(:last-child){
+  margin-bottom:rem(20px);
 }
 
-.form-data {
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(3, 60px);
-  grid-template-areas:
-    "name name  tel tel"
-    "street street street street"
-    "dom corp flat floor";
-  grid-row-gap: 42px;
-  grid-column-gap: 20px;
+.form-label{
+  display:block;
+  width:100%;
+}
 
-  &__name {
-    grid-area: name;
-  }
+.form-label:not(:last-child){
+  margin-right:rem(20px);
+}
 
-  &__tel {
-    grid-area: tel;
-  }
-
-  &__street {
-    grid-area: street;
-  }
-  &__dom {
-    grid-area: dom;
-  }
-
-  &__corp {
-    grid-area: corp;
-  }
-
-  &__flat {
-  }
-  grid-area: flat;
-
-  &__floor {
-    grid-area: floor;
+.form__block-row_two{
+  .form-label {
+    width: calc(100% / 2 );
   }
 }
 
-.form__item {
-    position:relative;
-}
-
-.form__label {
-    position: absolute;
-    top:-22px;
-    left:0;
-    display: block;
-    margin-bottom: 5px;
+.form__block-row_four{
+  .form-label {
+    width: calc(100% / 4 );
+  }
 }
 
 .form__input {
-  font-size: 700;
+  font-size: rem(18px);
+  padding: rem(22px) rem(10px);
   width: 100%;
-  height: 60px;
-  padding-left: 10px;
-  font-size: 18px;
-  color: #000;
-  border: none;
+  border:none;
 }
 
 .form__input:focus {
   outline: 3px solid #dde3bd;
 }
 
-/*----------------Правая часть формы------------------*/
-
-.form__comments {
-  margin-bottom: 20px;
+.form-label__title{
+  margin-bottom: rem(10px);
 }
 
-.form__comments textarea {
-  padding-top: 10px;
-  width: 100%;
-  width: 460px;
-  height: 180px;
-  resize: none;
+
+/*----------------Правая часть формы------------------*/
+
+
+.form__comments {
+  margin-bottom: rem(20px);
+}
+
+.form-input_textarea{
+  height: rem(180px);
+  resize:none;
+}
+
+
+.form-button_wrapper{
+
+  @include tablets{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
 }
 
 /* -----------------RADIO BUTTON-----------------*/
 
-.form-controls {
-  display: flex;
-  margin-bottom: 10px;
-}
+
 .radio {
   display: none;
 }
 
 .radio + label {
   position: relative;
-  padding: 5px 0 0 35px;
+  padding: rem(5px) 0 0 rem(35px);
   cursor: pointer;
 }
 .radio + label:before {
@@ -150,18 +171,18 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 26px;
-  height: 26px;
+  width: rem(26px);
+  height: rem(26px);
   border-radius: 50%;
   background: #fff;
 }
 .radio + label:after {
   content: "";
   position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 14px;
-  height: 14px;
+  top: rem(6px);
+  left: rem(6px);
+  width: rem(14px);
+  height: rem(14px);
   border-radius: 50%;
   background: #0f5a47;
   opacity: 0;
@@ -175,17 +196,11 @@
 }
 
 .form-controls__label:nth-of-type(1) {
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 /*-------------CheckBOX-----------*/
 
-
-.check-wrap{
-    display: flex;
-    align-items: center;
-    margin-bottom:40px;
-}
 .check-wrap input {
     display: none;
   } 
@@ -198,33 +213,33 @@
 
 .form-checkbox {
   background-color: #fff;
-  width: 26px;
-  height: 26px;
-  margin-right:9px;
+  width: rem(26px);
+  height: rem(26px);
+  margin-right:rem(9px);
   
 
   &:before,
   &:after {
     content: "";
     position: absolute;
-    border-radius: 3px;
+    border-radius: rem(3px);
     background-color: #0f5a47;
     opacity: 0;
   }
 
   &:before {
-    width: 7px;
-    height: 3px;
-    left: 7px;
-    bottom: 10px;
+    width: rem(7px);
+    height: rem(3px);
+    left: rem(7px);
+    bottom: rem(10px);
     transform: rotate(45deg);
   }
 
   &:after {
-    width: 11px;
-    height: 3px;
-    left: 10px;
-    bottom: 12px;
+    width: rem(11px);
+    height: rem(3px);
+    left: rem(10px);
+    bottom: rem(12px);
     transform: rotate(-48deg);
   }
 }
@@ -236,14 +251,15 @@
 }
 
 .form__btn{
-    margin-right:30px;
+    margin-right:rem(25px);
 }
 
 .form__cleaner{
+    padding-left:0;
+    padding-right:0;
     border:none;
-    background-color: rgba(0, 0, 0, 0);
+    background-color:transparent;
     color: #0f5a47;
-    font-size: 18px;
     font-weight: 500;
 }
 

@@ -1,20 +1,30 @@
 .product-features {
     display: flex;
+
+    @include phones {
+      width:100%;
+      justify-content: space-between;
+    }
   }
   .product-features__item {
     display:flex;
     justify-content:center;
     align-items: center;
-    width: 140px;
-    font-size: 16px;
+    width: rem(140px);
+    font-size: rem(16px);
     color: #fff;
   }
+  
   .product-features__item:not(:last-child) {
-    margin-right:50px;
+    margin-right:rem(45px);
+
+    @include phones {
+        margin-right: 0;
+    }
   }
   
   .product-features__img{
-    min-width:50px;
-    height:50px;
-    margin-right:7px;
+    min-width:rem(45px);
+    height:rem(50px);
+    margin-right:rem(7px);
   }

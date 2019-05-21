@@ -1,41 +1,52 @@
 .slider {
-  margin-bottom:100px;
+  margin-bottom:rem(100px);
   &::after{
       content:"";
-      width:135px;
-      height:112px;
+      width:rem(135px);
+      height:rem(112px);
       position: absolute;
       right:0;
       bottom:-30px;
       background: url('../img/slider__berry.png') center center no-repeat;
+      background-size:cover;
   }
 }
 
 .slider-container {
   align-items: center;
+  justify-content: center;
+  @include tablets{
+    padding-top: rem(130px);
+    padding-bottom: rem(110px)
+  }
 }
 
 
 .slider__arrow{
-  width:30px;
-  height:30px;
+  width:rem(30px);
+  height:rem(30px);
   position: absolute;
   top:50%;
-  border-left:3px solid black;
-  border-bottom:3px solid black;
-  border-bottom-left-radius: 6px;
+  border-left:rem(3px) solid black;
+  border-bottom:rem(3px) solid black;
+  border-bottom-left-radius: rem(6px);
   cursor: pointer;
+
+
+  @include tablets{
+    top:25%;
+  }
   
   
 }
 
 .arrow-left{
-  left:30px;
+  left:rem(30px);
   transform: rotate(45deg)
 }
 
 .arrow-right{
-  right:30px;
+  right:rem(30px);
   transform: rotate(-135deg)
 }
 
@@ -48,11 +59,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include tablets{
+    flex-direction: column;
+  }
 }
 
 .slider__img {
-  margin-right: 90px;
+  margin-right: rem(90px);
   position: relative;
+
+  @include tablets {
+    margin-right:0;
+    margin-bottom: rem(90px);
+  }
 }
 
 .slider__img::after {
@@ -62,8 +82,8 @@
   height: 326px;
   background: url("../img/slider__leaf.png") center center no-repeat;
   z-index: -100;
-  left: -60px;
-  bottom: -20px;
+  left: rem(-60px);
+  bottom: rem(-20px);
 }
 
 .seaweed-img {
@@ -74,43 +94,49 @@
 
 .seaweed-img img {
   position: relative;
-  top: -74px;
-  left: -9px;
+  top: -75px;
+  left: -8px;
 }
 
+
 .slider__description {
-  width: 370px;
+  width: rem(370px);
   display: flex;
   flex-direction: column;
+
+  @include tablets{
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .slider__description h3 {
-  font-size: 36px;
+  font-size: rem(36px);
   color: #0d0d0d;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .slider__description .composition {
-  font-size: 24px;
+  font-size: rem(24px);
   font-weight: 500;
   color: #323232;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
 }
 
 .slider__description p {
-  font-size: 18px;
+  font-size: rem(18px);
   color: #666666;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
 }
 
 .nutritional-value {
   display: flex;
-  margin-bottom: 35px;
+  margin-bottom: rem(35px);
 }
 
 .nutritional-value__item div:not(:last-child) {
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
 }
 
 .nutritional-value__item div:last-child {
@@ -119,7 +145,7 @@
 }
 
 .nutritional-value__item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: rem(50px);
 }
 
 .slider__btn-wrapper {
@@ -127,10 +153,10 @@
 }
 
 .slider__btn-wrapper div {
-  font-size: 60px;
+  font-size: rem(60px);
   font-weight: 300;
   color: #0d0d0d;
-  margin-right: 30px;
+  margin-right: rem(30px);
 }
 
 .slider__btn {

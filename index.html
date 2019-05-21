@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Chocco</title>
     <link rel="stylesheet" href="css/normalize.css" />
@@ -43,13 +46,21 @@
               </ul>
             </nav>
 
-            <div class="phone-wrapper">
-                <svg class="phone__img">
-                    <use xlink:href="./sprite.svg#phone"></use>
-                  </svg>
+            <div class="phone-wrapper header-phone_wrapper">
+              <svg class="phone__img">
+                <use xlink:href="./sprite.svg#phone"></use>
+              </svg>
               <a href="tel:+88009039090" class="phone">8 (800) 903 90 90</a>
             </div>
+
+            <a class="hamburger-menu-link" href="">
+              <div class="hamburger-menu-link__bars"></div
+            ></a>
           </header>
+
+          <div class="introduction__chocco">
+            <img src="./img/introduction__chocco.png" alt="chocco" />
+          </div>
 
           <div class="order">
             <h1 class="order__head">НАТУРАЛЬНЫЕ ШОКОЛАДНЫЕ БАТОНЧИКИ</h1>
@@ -63,7 +74,6 @@
           <ul class="product-features">
             <li class="product-features__item">
               <svg class="product-features__img .product-features__1">
-            
                 <use xlink:href="./sprite.svg#product-features__1"></use>
               </svg>
               <span class="product-features__description"
@@ -72,7 +82,6 @@
             </li>
             <li class="product-features__item">
               <svg class="product-features__img .product-features__2">
-            
                 <use xlink:href="./sprite.svg#product-features__2"></use>
               </svg>
               <span class="product-features__description"
@@ -81,7 +90,6 @@
             </li>
             <li class="product-features__item">
               <svg class="product-features__img .product-features__3">
-            
                 <use xlink:href="./sprite.svg#product-features__3"></use>
               </svg>
               <span class="product-features__description"
@@ -89,10 +97,6 @@
               >
             </li>
           </ul>
-
-          <div class="introduction__chocco">
-            <img src="./img/introduction__chocco.png" alt="chocco" />
-          </div>
         </div>
       </section>
 
@@ -107,10 +111,9 @@
           </div>
           <ul class="feature__list">
             <li class="feature__item">
-          <svg class="feature__1">
-            
-            <use xlink:href="./sprite.svg#feature__1"></use>
-          </svg>
+              <svg class="feature__1">
+                <use xlink:href="./sprite.svg#feature__1"></use>
+              </svg>
               <h3>Полезно</h3>
               <p>
                 Натуральность - ключевое качество нашей продукции. Мы используем
@@ -128,9 +131,9 @@
               </p>
             </li>
             <li class="feature__item">
-                <svg class="feature__3">
-                    <use xlink:href="./sprite.svg#feature__3"></use>
-                  </svg>
+              <svg class="feature__3">
+                <use xlink:href="./sprite.svg#feature__3"></use>
+              </svg>
               <h3>Питательно</h3>
               <p>
                 Высокое содержание качественного белка, а также всех необходимых
@@ -244,37 +247,61 @@
       </section>
 
       <section class="menu">
-        <div class="container menu__container">
-          <h2 class="section-title menu__title">МЕНЮ</h2>
-          <ul class="menu__list">
-            <li class="menu__item">
-              <div class="menu__block menu__milk"> <span>Батончики с молоком</span></div>
-              <div class="menu__accordion">
-                <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
-                  Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
-              </div>
-              <div class="menu__block menu__milk" ><span>Батончики с молоком</span></div>
-            </li>
-            <li class="menu__item menu__item--active">
-                <div class="menu__block menu__fruits"> <span>С мёдом и фруктами
-                  </span></div>
-                <div class="menu__accordion">
-                  <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
-                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
-                </div>
-                <div class="menu__block menu__fruits" ><span>С мёдом и фруктами
-                  </span></div>
-            </li>
-            <li class="menu__item">
-                <div class="menu__block menu__berry"> <span>Дикие ягоды</span></div>
-                <div class="menu__accordion">
-                  <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
-                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
-                </div>
-                <div class="menu__block menu__berry" ><span>Дикие ягоды</span></div>
-            </li>
-          </ul>
-        </div>
+        <h2 class="section-title menu__title">МЕНЮ</h2>
+        <ul class="menu__list">
+          <li class="menu__item menu__item--active">
+            <a class="menu__block menu__milk">
+              <span>Батончики с молоком</span>
+            </a>
+            <div class="menu__accordion">
+              <p>
+                Рекомендуем употреблять батончики вместе с кокосовым или
+                миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё
+                хотеть от жизни? Батончик – он твой лучший друг и радует всех
+                вокруг. Как классно, что можно питаться полезно и вкусно, а не
+                как попало. Бабуля, конечно, за такую еду не похвалит, но кто её
+                будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с
+                днём Победы.
+              </p>
+              <span class="menu__accordion-close"></span>
+            </div>
+        
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__block menu__fruits">
+              <span>С мёдом и фруктами </span></a
+            >
+            <div class="menu__accordion">
+              <p>
+                Рекомендуем употреблять батончики вместе с кокосовым или
+                миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё
+                хотеть от жизни? Батончик – он твой лучший друг и радует всех
+                вокруг. Как классно, что можно питаться полезно и вкусно, а не
+                как попало. Бабуля, конечно, за такую еду не похвалит, но кто её
+                будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с
+                днём Победы.
+              </p>
+              <span class="menu__accordion-close"></span>
+            </div>
+          </li>
+
+          <li class="menu__item  ">
+            <a class="menu__block menu__berry "> <span>Дикие ягоды</span></a>
+            <div class="menu__accordion">
+              <p>
+                Рекомендуем употреблять батончики вместе с кокосовым или
+                миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё
+                хотеть от жизни? Батончик – он твой лучший друг и радует всех
+                вокруг. Как классно, что можно питаться полезно и вкусно, а не
+                как попало. Бабуля, конечно, за такую еду не похвалит, но кто её
+                будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с
+                днём Победы.
+              </p>
+              <span class="menu__accordion-close"></span>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section class="rewiews">
@@ -356,123 +383,154 @@
 
       <section class="form">
         <div class="container form__container">
-           <h2 class="section-title form-title">ЗАКАЖИТЕ ДОСТАВКУ</h2>
-          <form action="" class="form-wrapper">
-            <ul class="form__block form-data">
-              <li class="form__item form-data__name">
-                <label class="form__label" for="name">Имя</label>
-                <input  class="form__input" id="name" type="text">
-              </li>
-              <li class="form__item form-data__tel">
-                <label class="form__item  form__label" for="tel">Телефон</label>
-                <input  class="form__input" id="tel" type="text">
-              </li>
-              <li class="form__item  form-data__street">
-                <label class="form__label" for="street">Улица</label>
-                <input  class="form__input" id="street" type="text">
-              </li>
-              <li class="form__item  form-data__dom">
-                <label class="form__label" for="dom">Дом</label>
-                <input  class="form__input" id="dom" type="text">
-              </li>
-              <li class="form__item  form-data__corp">
-                <label class="form__label" for="corp">Корпус</label>
-                <input  class="form__input" id="corp" type="text">
-              </li>
-              <li class="form__item  form-data__flat">
-                  <label class="form__label" for="flat">Квартира</label>
-                <input  class="form__input" id="flat" type="text">
-              </li>
-              <li class="form__item  form-data__floor">
-                <label class="form__label" for="flor">Этаж</label>
-                <input  class="form__input" id="flor" type="text">
-              </li>
-            </ul>
-            <div class="form__block form__button">
-              <div class="form__item  form__comments">      
-                      <label class="form__label" for="comments">Имя</label>
-                      <textarea class="form__input" id="comments" type="text"></textarea>
+          <h2 class="section-title form-title">ЗАКАЖИТЕ ДОСТАВКУ</h2>
+          <div class="form-wrapper">
+            <form action="" class="form-content">
+              <div class="form__block form-wrapper__left">
+                <div class="form__block-row form__block-row_two">
+                  <label class="form-label form-label_name">
+                    <div class="form-label__title">Имя</div>
+                    <input class="form__input" type="text" />
+                  </label>
+  
+                  <label class="form-label form-label_tel">
+                    <div class="form-label__title">Телефон</div>
+                    <input class="form__input" type="text" />
+                  </label>
+                </div>
+  
+                <div class="form__block-row form__block-row_one">
+                  <label class="form-label form-label_street">
+                    <div class="form-label__title">Улица</div>
+                    <input class="form__input" type="text" />
+                  </label>
+                </div>
+  
+                <div class="form__block-row form__block-row_four">
+                  <label class="form-label form-label_dom">
+                    <div class="form-label__title">Дом</div>
+                    <input class="form__input" type="text" />
+                  </label>
+  
+                  <label class="form-label form-label_corp">
+                    <div class="form-label__title">Корпус</div>
+                    <input class="form__input" type="text" />
+                  </label>
+  
+                  <label class="form-label form-label_flat">
+                    <div class="form-label__title">Квартира</div>
+                    <input class="form__input" type="text" />
+                  </label>
+  
+                  <label class="form-label form-label_floor">
+                    <div class="form-label__title">Этаж</div>
+                    <input class="form__input" type="text" />
+                  </label>
+                </div>
               </div>
-              <div class="form-controls">
-                  <input type="radio" name="radio" class="radio" id="radio-1" />
-                  <label class="form-controls__label" for="radio-1">Потребуется сдача</label>
-                  <input type="radio" name="radio" class="radio" id="radio-2" checked />
-                  <label class="form-controls__label" for="radio-2">Оплата по карте</label>
-              </div>
+  
+              <div class="form__block form-wrapper__right">
 
-                  <div class="check-wrap">
-                    <input class="check-input" type="checkbox" id="check1" checked>
-                    <label  class=" form-checkbox" for="check1">
-                    </label> Не перезванивать
+                  <div class="form__block-row">
+                      <label class="form-label form-label_street">
+                        <div class="form-label__title">Улица</div>
+                        <textarea class="form__input form-input_textarea" name="comment"></textarea>
+                      </label>
+                    </div>
+    
+                <div class="form-button_wrapper">
+                  <div class="form__block-row">
+                    <input type="radio" name="radio" class="radio" id="radio-1" />
+                    <label class="form-controls__label" for="radio-1"
+                      >Потребуется сдача</label
+                    >
+                    <input
+                      type="radio"
+                      name="radio"
+                      class="radio"
+                      id="radio-2"
+                      checked
+                    />
+                    <label class="form-controls__label" for="radio-2"
+                      >Оплата по карте</label
+                    >
                   </div>
-
-                <div class="form__buttom-wrapper">
-                   <button type="submit" class="btn form__btn slider__btn">
-                    ЗАКАЗАТЬ
-                  </button>
-                  <button type="button" class="form__cleaner">
+    
+                  <div class="form__block-row check-wrap">
+                    <input
+                      class="check-input"
+                      type="checkbox"
+                      id="check1"
+                      checked
+                    />
+                    <label class=" form-checkbox" for="check1"> </label> Не
+                    перезванивать
+                  </div>
+    
+                  <div class="form__block-row">
+                    <button type="submit" class="btn form__btn slider__btn">
+                      ЗАКАЗАТЬ
+                    </button>
+                    <button type="reset" class="form__cleaner">
                       Очистить
                     </button>
+                  </div>
                 </div>
 
-            
-
-
-            </div>
-          </form>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
       <section class="map">
-          <div class="map__img">
-            <img class="map__pic" src="./img/map.png" alt="map">
-            <div class="mark">
-              <span>CHOCCO</span>
-            </div>
-          </div> 
-          <footer class="footer">
-            <div class="container footer__container">
-              <div class="contacts">
-                <div class="location">Москва, ул.Новый Арбат, д.31/12</div>
-                <div class="footer__phone-wrapper phone-wrapper">
-                    <svg class="phone__img footer-phone__img">
-                        <use xlink:href="./sprite.svg#phone"></use>
-                      </svg>
-                  <a href="tel:+88009039090" class="phone footer__phone">8 (800) 903 90 90</a>
-                </div>
+        <div class="our-map">
+        </div>
+        <footer class="footer">
+          <div class="container footer__container">
+            <div class="footer-col footer-col_left">
+              <div class="location">Москва, ул.Новый Арбат, д.31/12</div>
+              <div class="footer__phone-wrapper phone-wrapper">
+                <svg class="phone__img footer-phone__img">
+                  <use xlink:href="./sprite.svg#phone"></use>
+                </svg>
+                <a href="tel:+88009039090" class="phone footer__phone"
+                  >8 (800) 903 90 90</a
+                >
               </div>
-              <ul class="social">
-                <li class="social__item">
-                  <a href="#" class="social__link">
-                    <svg class="vk">
-                      <use xlink:href="./sprite.svg#vk"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link">
-                      <svg class="fb">
-                          <use xlink:href="./sprite.svg#fb"></use>
-                        </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link">
-                      <svg class="insta">
-                          <use xlink:href="./sprite.svg#insta"></use>
-                        </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link">
-                      <svg class="twitter">
-                          <use xlink:href="./sprite.svg#twitter"></use>
-                        </svg>
-                  </a>
-                </li>
-              </ul>
             </div>
-          </footer>
+            <ul class="footer-col footer-col_right social">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="vk">
+                    <use xlink:href="./sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="fb">
+                    <use xlink:href="./sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="insta">
+                    <use xlink:href="./sprite.svg#insta"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="twitter">
+                    <use xlink:href="./sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
       </section>
 
       <ul class="fixed-menu">

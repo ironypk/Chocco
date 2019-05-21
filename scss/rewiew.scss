@@ -1,44 +1,52 @@
 .rewiew {
+    display:flex;
     position: relative;
-    width: 940px;
-    height: 350px;
-    padding: 50px 0 40px 45px;
-    
-    box-shadow: -10.6px 7.5px 30px 0 rgba(145, 169, 157, 0.17);
-    margin-bottom: 50px;
+    padding: rem(50px) rem(130px) 0 0;
+    margin-bottom: rem(50px);
 
     &::before{
       content:"";
-      width: 130px;
-      height:170px;
+      width: rem(130px);
+      height:rem(170px);
       position: absolute;
       top:0;
       right:0;
       background:url('../img/rewiews__pattern.png');
+      @include cover;
+    }
+
+    @include tablets {
+      padding:rem(50px) rem(30px);
     }
   }
 
 
 
   .rewiew__item{
+      width:100%;
       display:none;
   }
 
   .rewiew__item--active{
       display:flex;
+      
+
+    @include tablets{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
   .rewiew__pattern {
     position: absolute;
     top: 0;
     right: 0;
   }
-  .rewiew__img-wrap {
-    margin-right: 20px;
-  }
+
   .rewiew__img {
-    width: 250px;
-    height: 260px;
-    margin-right:20px
+    width: rem(250px);
+    height: rem(260px);
+    margin-right:rem(20px);
   }
 
   .rewiew__img img{
@@ -47,21 +55,21 @@
   }
   
   .rewiew__description {
-    width: 435px;
-    padding-top: 15px;
+    width: rem(435px);
+    padding: rem(15px) 0;
   }
   .rewiew__head {
-    font-size: 30px;
+    font-size: rem(30px);
     font-weight: 500;
     color: #323232;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
   }
   .rewiew__text {
-    font-size: 18px;
+    font-size: rem(18px);
     color: #666;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
   }
   .rewiew__author {
-    font-size: 18px;
+    font-size: rem(18px);
     color: #666;
   }

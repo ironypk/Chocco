@@ -1,38 +1,70 @@
 .introduction {
   background:url("../img/introduction__pattern.png") right bottom no-repeat;
   background-color:#61c4d9;
+  @include tablets {
+    background-position-y:top;
+  }
 }
 
 .introduction__container {
   justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: rem(50px);
+
+  @include tablets {
+    align-items: center;
+  }
 
   &::after {
     content: "";
-    width: 503px;
-    height: 650px;
+    width: rem(503px);
+    height: rem(650px);
     position: absolute;
-    background:url("../img/introduction__berry.png") center 360px no-repeat;
-    right: 30px;
-    bottom: -50px;
+    background:url("../img/introduction__berry.png") center rem(360px) no-repeat;
+    right: rem(30px);
+    bottom: rem(-50px);
     z-index: -100;
+
+    @include tablets {
+      background:url("../img/img_768/ягоды.png") center center no-repeat;
+      right:auto;
+      bottom:170px;
+    }
   }
 
   &::before {
     content: "";
-    width: 1056px;
-    height: 353px;
+    width: rem(1056px);
+    height: rem(353px);
     position: absolute;
     background: url("../img/introduction__leaf.png") center center no-repeat;
-    right: 15px;
-    bottom: -50px;
+    right: rem(15px);
+    bottom: rem(-50px);
     z-index:100;
+
+    @include tablets {
+      width: rem(300px);
+      height: rem(300px);
+      background: url("../img/img_768/листья.png") center center no-repeat;
+      top:311px;
+      right:71px;
+    }
   }
 }
 
 
 .introduction__chocco{
+  height:rem(500px);
+  width:rem(500px);
   position: absolute;
-  right:25px;;
-  bottom:60px;
+  right:rem(25px);;
+  bottom:rem(60px);
+  background-position: cover;
+
+  @include tablets {
+    position: static;
+    right:auto;
+    top:53px;
+    margin-bottom:rem(70px);
+  }
+
 }

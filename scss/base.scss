@@ -2,14 +2,33 @@
     box-sizing:border-box;
 }
 
+html{
+    font-size:16px;
+
+    @include tablets{
+        font-size:15px;
+
+    }
+
+    @include phones{
+        font-size: 13px;
+    }
+}
+
+
 body,html{
     height: 100%;
+}
+
+body{
+    font-size:rem(16px);
     font-family:AlegreyaSans;
     font-weight: 400;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 
 
 a{
@@ -32,29 +51,36 @@ p{
     padding:0;
 }
 .wrapper{
+    min-height:100%;
     position: relative;
-    width:100%;
     overflow: hidden;
 
     section{
-    min-height:650px;
+    min-height:40.625rem;
     height:100vh;
     position: relative;
-    
+
+    @include tablets{
+        height:100%;
+    }
     }
 }
 
 .container{
-    width:1100px;
-    padding-left:80px;
-    padding-right:80px;
-    position: relative;
+    max-width:1100px;
     height:100%;
+    width:calc(100% - rem(80px));
+    padding:0 rem(80px) 0 ;
+    position: relative;
     margin:0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     z-index:1000;
+
+    @include tablets{
+        width:93%;
+        padding:0;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,8 +99,9 @@ img{
 
 
 .section-title {
+    text-align: center;
     font-weight: 700;
-    font-size: 48px;
+    font-size: rem(48px);
     color: #0d0d0d;
   }
 

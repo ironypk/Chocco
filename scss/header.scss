@@ -1,53 +1,72 @@
 .header {
-    padding-top: 25px;
-    margin-bottom: 100px;
+    width:100%;
+    padding-top: rem(25px);
+    margin-bottom: rem(100px);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-  
+
+    @include tablets{
+      margin-bottom:0;
+    }
   }
   
   .logo {
-    width:55px;
+    width:rem(55px);
     word-wrap: break-word;
     color: #fff;
     font-family: MuseoSansCyrl;
-    font-size: 24px;
+    font-size: rem(24px);
     line-height: 0.88;
-    margin-right: 25px;
+    margin-right:10px;
   }
 
   .navbar {
-    margin-right: 45px;
+    display: flex;
+    margin-right:5px;
     z-index: 500;
+
+    @include tablets {
+      display:none;
+    }
+
   }
   .navbar__list {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
   }
 
   .navbar__item:not(:last-child){
-    margin-right:30px;
+    margin-right:rem(20px);
   }
   
   .navbar__link {
-    font-size: 18px;
+    font-size: rem(18px);
     color: #fff;
   }
+
   .phone-wrapper{
-    position: relative;
+    display:flex;
+    align-items: center;
+  }
+
+  .header-phone_wrapper{
+    @include tablets{
+      display: none;
+    }
   }
   .phone {
-    font-size: 24px;
+    font-size: rem(24px);
     color: #fff;
     z-index: 500;
+
+  
   }
 
 
   .phone__img{
-    position:absolute;
     width:12px;
     height:12px;
-    top: 7px;
-      left: -20px;
-      fill:#fff;
+    fill:#fff;
+    margin-right:5px;
   }

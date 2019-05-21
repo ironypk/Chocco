@@ -2,39 +2,57 @@
   text-align: center;
   &::after {
     content: "";
-    width: 161px;
-    height: 225px;
+    width: rem(161px);
+    height: rem(225px);
     position: absolute;
-    background: url(../img/raspeberry.png) center -90px no-repeat;
+    background: url(../img/raspeberry.png) center rem(-90px) no-repeat;
     left: 0;
-    bottom: -150px;
+    bottom: rem(-150px);
+    background-size: cover;
+
+    @include tablets{
+      bottom:0;
+    }
   }
 }
 .feature__container {
   align-items: center;
+  justify-content: center;
+  padding-top:rem(80px);
+  padding-bottom:rem(90px);
 }
 
 .feature__head-block {
-  width: 400px;
-  margin-bottom: 85px;
+  margin-bottom: rem(85px);
 }
 
 .feature__title {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .feature__head-block p {
-  font-size: 18px;
+  width:rem(420px);
+  font-size: rem(18px);
   color: #666;
 }
 
 .feature__list {
   display: flex;
   justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+    align-items:center;
+  }
 }
 
 .feature__item:not(:last-child) {
-  margin-right: 80px;
+  margin-right: rem(80px);
+
+  @include tablets{
+    margin-right:0;
+    margin-bottom:rem(80px);
+  }
 }
 
 .feature__item {
@@ -45,14 +63,14 @@
 }
 
 .feature__item h3 {
-  font-size: 27px;
+  font-size: rem(27px);
   font-weight: 700;
   color: #000;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
 }
 
 .feature__item p {
-  font-size: 18px;
+  font-size: rem(18px);
   font-weight: 300;
   color: #666;
 }
@@ -60,9 +78,9 @@
 .feature__1,
 .feature__2,
 .feature__3 {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 65px;
+  width: rem(70px);
+  height: rem(70px);
+  margin-bottom: rem(65px);
 }
 
 
