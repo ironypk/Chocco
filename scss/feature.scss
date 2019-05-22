@@ -9,10 +9,6 @@
     left: 0;
     bottom: rem(-150px);
     @include cover;
-
-    @include tablets{
-      bottom:0;
-    }
   }
 }
 .feature__container {

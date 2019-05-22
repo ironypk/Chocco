@@ -1,6 +1,7 @@
 .introduction {
   background:url("../img/introduction__pattern.png") right bottom no-repeat;
   background-color:#61c4d9;
+  background-size: contain;
   @include tablets {
     background-position-y:top;
   }

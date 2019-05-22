@@ -12,6 +12,7 @@
         left: rem(30px);
         top: rem(-70px);
         background-size: cover;
+        z-index:10;
       }
 }
 
@@ -28,6 +29,10 @@
     top:0;
     bottom:0;
     display: flex;
+    justify-content: flex-end;
+    @include tablets {
+       width:100%;
+      }
 }
 
 .menu__item{
@@ -78,8 +83,9 @@
     background: rgba(#000, .7);
 
     @include tablets{
-        width: rem(400px);
+        width: calc(100%-rem(80px));
     }
+
 }
 
 .menu__accordion p{
@@ -99,7 +105,6 @@
 
 .menu__item--active{
     @include tablets{
-        
         position:absolute;
         right:0;
         top:0;

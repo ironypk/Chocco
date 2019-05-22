@@ -13,9 +13,14 @@
     background: url("../img/form__bush.png");
     width: rem(260px);
     height: rem(280px);
-    top:rem(-130px);
-    right:0;
+    top:rem(-150px);
+    right:rem(-40px);
     @include cover;
+    @include tablets{
+      top:rem(-80px);
+      width: rem(160px);
+      height: rem(180px);
+    }
   }
 
   &::before {

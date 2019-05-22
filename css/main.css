@@ -546,7 +546,7 @@ p {
   flex-direction: column; }
   @media screen and (max-width: 768px) {
     .container {
-      padding: 0 1.5625rem; } }
+      padding: 0 0.625rem; } }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -566,7 +566,8 @@ img {
 
 .introduction {
   background: url("../img/introduction__pattern.png") right bottom no-repeat;
-  background-color: #61c4d9; }
+  background-color: #61c4d9;
+  background-size: contain; }
   @media screen and (max-width: 768px) {
     .introduction {
       background-position-y: top; } }
@@ -650,6 +651,8 @@ img {
   z-index: 50; }
   @media screen and (max-width: 768px) {
     .header {
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
       width: 100%; } }
 
 .logo {
@@ -828,9 +831,6 @@ img {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
-    @media screen and (max-width: 768px) {
-      .feature::after {
-        bottom: 0; } }
 
 .feature__container {
   padding-top: 4.6875rem;
@@ -928,6 +928,9 @@ img {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
+    @media screen and (max-width: 768px) {
+      .slider::after {
+        right: -1.25rem; } }
 
 .slider-container {
   padding-top: 8.125rem;
@@ -947,7 +950,8 @@ img {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  z-index: 50; }
   @media screen and (max-width: 768px) {
     .slider__item {
       -webkit-box-orient: vertical;
@@ -959,6 +963,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.slider-col {
+  width: 45%; }
+  @media screen and (max-width: 768px) {
+    .slider-col {
+      width: 70%; } }
 
 .slider__left-col {
   margin-right: 5.625rem;
@@ -1167,7 +1177,8 @@ img {
     background: url(../img/menu__raspeberry.png) center center no-repeat;
     left: 1.875rem;
     top: -4.375rem;
-    background-size: cover; }
+    background-size: cover;
+    z-index: 10; }
 
 .menu__title {
   position: absolute;
@@ -1182,7 +1193,13 @@ img {
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  @media screen and (max-width: 768px) {
+    .menu__list {
+      width: 100%; } }
 
 .menu__item {
   height: 100%;
@@ -1233,7 +1250,7 @@ img {
   background: rgba(0, 0, 0, 0.7); }
   @media screen and (max-width: 768px) {
     .menu__accordion {
-      width: 25rem; } }
+      width: calc(100%-rem(80px)); } }
 
 .menu__accordion p {
   text-align: justify;
@@ -1301,6 +1318,24 @@ img {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    .rewiews::after {
+      right: -2.1875rem; } }
+
+.rewiews::before {
+  content: "";
+  position: absolute;
+  background: url("../img/rewiews__anyberry.png");
+  width: 9.625rem;
+  height: 14rem;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    .rewiews::before {
+      left: -2.5rem; } }
 
 .rewiews__container {
   -webkit-box-align: center;
@@ -1310,17 +1345,6 @@ img {
     .rewiews__container {
       padding-top: 5rem;
       padding-bottom: 4.375rem; } }
-  .rewiews__container::before {
-    content: "";
-    position: absolute;
-    background: url("../img/rewiews__anyberry.png");
-    width: 9.625rem;
-    height: 14rem;
-    bottom: -6.875rem;
-    left: 0;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
 
 .rewiews__title {
   text-align: center;
@@ -1445,11 +1469,16 @@ img {
     background: url("../img/form__bush.png");
     width: 16.25rem;
     height: 17.5rem;
-    top: -8.125rem;
-    right: 0;
+    top: -9.375rem;
+    right: -2.5rem;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
+    @media screen and (max-width: 768px) {
+      .form::after {
+        top: -5rem;
+        width: 10rem;
+        height: 11.25rem; } }
   .form::before {
     content: "";
     position: absolute;
