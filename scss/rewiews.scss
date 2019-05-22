@@ -13,8 +13,12 @@
 
 .rewiews__container {
   align-items:center;
-  padding-top:rem(120px);
-  padding-bottom:rem(90px);
+
+  @include tablets{
+    padding-top:rem(80px);
+    padding-bottom:rem(70px);
+  }
+
 
 
   &::before {

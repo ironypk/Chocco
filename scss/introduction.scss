@@ -7,28 +7,20 @@
 }
 
 .introduction__container {
+  flex:1;
   justify-content: space-between;
   padding-bottom: rem(50px);
 
-  @include tablets {
-    align-items: center;
-  }
-
   &::after {
     content: "";
-    width: rem(503px);
-    height: rem(650px);
+    width: rem(388px);
+    height: rem(286px);
     position: absolute;
-    background:url("../img/introduction__berry.png") center rem(360px) no-repeat;
+    background:url("../img/introduction__berry.png");
     right: rem(30px);
     bottom: rem(-50px);
-    z-index: -100;
-
-    @include tablets {
-      background:url("../img/img_768/ягоды.png") center center no-repeat;
-      right:auto;
-      bottom:170px;
-    }
+    z-index:500;
+    @include cover;
   }
 
   &::before {
@@ -36,35 +28,49 @@
     width: rem(1056px);
     height: rem(353px);
     position: absolute;
-    background: url("../img/introduction__leaf.png") center center no-repeat;
+    background: url("../img/introduction__leaf.png");
     right: rem(15px);
     bottom: rem(-50px);
-    z-index:100;
+    @include cover;
+    z-index: 10;
+  }
 
-    @include tablets {
-      width: rem(300px);
-      height: rem(300px);
-      background: url("../img/img_768/листья.png") center center no-repeat;
-      top:311px;
-      right:71px;
+  @include tablets {
+    align-items: center;
+    &::after, &::before{
+      display: none;
     }
   }
 }
 
 
 .introduction__chocco{
-  height:rem(500px);
-  width:rem(500px);
+  max-width:rem(500px);
+  max-height:rem(520px);
   position: absolute;
   right:rem(25px);;
-  bottom:rem(60px);
+  top:rem(60px);
   background-position: cover;
+  z-index:0;
 
   @include tablets {
-    position: static;
-    right:auto;
-    top:53px;
+    max-width:rem(400px);
+    max-height:rem(420px);
+    position: relative;
+    right:0;
+    top:0;
     margin-bottom:rem(70px);
+
+      &:before{
+      content:"";
+      position:absolute;
+      width: rem(500px);
+      height: rem(330px);
+      background: url("../img/img_768/one_leaf.png") rem(50px) rem(112px) no-repeat, url("../img/img_768/four_leaf.png") rem(215px) center no-repeat,  url("../img/img_768/ягоды.png") center center no-repeat;
+      bottom:rem(-30px);
+      right:rem(-40px);
+    }
+      
+    }
   }
 
-}

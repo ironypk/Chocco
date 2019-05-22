@@ -8,12 +8,11 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Chocco</title>
-    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="wrapper">
-      <section class="introduction">
+      <section class="section introduction">
         <div class="introduction__container container">
           <header class="header">
             <a href="#" class="logo">
@@ -73,7 +72,7 @@
 
           <ul class="product-features">
             <li class="product-features__item">
-              <svg class="product-features__img .product-features__1">
+              <svg class="product-features__img product-features__1">
                 <use xlink:href="./sprite.svg#product-features__1"></use>
               </svg>
               <span class="product-features__description"
@@ -81,7 +80,7 @@
               >
             </li>
             <li class="product-features__item">
-              <svg class="product-features__img .product-features__2">
+              <svg class="product-features__img product-features__2">
                 <use xlink:href="./sprite.svg#product-features__2"></use>
               </svg>
               <span class="product-features__description"
@@ -89,7 +88,7 @@
               >
             </li>
             <li class="product-features__item">
-              <svg class="product-features__img .product-features__3">
+              <svg class="product-features__img product-features__3">
                 <use xlink:href="./sprite.svg#product-features__3"></use>
               </svg>
               <span class="product-features__description"
@@ -100,7 +99,7 @@
         </div>
       </section>
 
-      <section class="feature">
+      <section class="section feature">
         <div class="feature__container container">
           <div class="feature__head-block">
             <h2 class="section-title feature__title">ПОЧЕМУ CHOCCO?</h2>
@@ -144,15 +143,15 @@
         </div>
       </section>
 
-      <section class="slider">
+      <section class="section slider">
         <div class="container slider-container">
           <span class="slider__arrow arrow-left"></span>
           <ul class="slider__list">
             <li class="slider__item slider__item--active">
-              <div class="slider__img seaweed-img">
-                <img src="./img/slider__seaweed.png" alt="seaweed" />
+              <div class="slider__left-col">
+                <img class="slider-pic" src="./img/slider__seaweed.png" alt="seaweed" />
               </div>
-              <div class="slider__description">
+              <div class="slider__right-col">
                 <h3>Батончик “Морские водоросли”</h3>
                 <div class="composition">Состав:</div>
                 <p>
@@ -163,16 +162,16 @@
 
                 <ul class="nutritional-value">
                   <li class="nutritional-value__item">
-                    <div>
+                    <span>
                       Калорийность
-                    </div>
-                    <div>120ккал</div>
+                    </span>
+                    <span>120ккал</span>
                   </li>
                   <li class="nutritional-value__item">
-                    <div>
+                    <span>
                       Вес
-                    </div>
-                    <div>98грамм</div>
+                    </span>
+                    <span>98грамм</span>
                   </li>
                 </ul>
 
@@ -189,7 +188,7 @@
         </div>
       </section>
 
-      <section class="team">
+      <section class="section team">
         <div class="container team__container">
           <h2 class="team__title section-title">КОМАНДА</h2>
 
@@ -246,7 +245,7 @@
         </div>
       </section>
 
-      <section class="menu">
+      <section class="section menu">
         <h2 class="section-title menu__title">МЕНЮ</h2>
         <ul class="menu__list">
           <li class="menu__item menu__item--active">
@@ -304,7 +303,7 @@
         </ul>
       </section>
 
-      <section class="rewiews">
+      <section class="section rewiews">
         <div class="rewiews__container container">
           <h2 class="section-title rewiews__title">ОТЗЫВЫ</h2>
 
@@ -381,7 +380,7 @@
         </div>
       </section>
 
-      <section class="form">
+      <section class="section form">
         <div class="container form__container">
           <h2 class="section-title form-title">ЗАКАЖИТЕ ДОСТАВКУ</h2>
           <div class="form-wrapper">
@@ -483,7 +482,7 @@
         </div>
       </section>
 
-      <section class="map">
+      <section class="section map">
         <div class="our-map">
         </div>
         <footer class="footer">

@@ -1,13 +1,12 @@
 .header {
-    width:100%;
     padding-top: rem(25px);
-    margin-bottom: rem(100px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index:50;
 
     @include tablets{
-      margin-bottom:0;
+      width:100%;
     }
   }
   
@@ -24,7 +23,6 @@
   .navbar {
     display: flex;
     margin-right:5px;
-    z-index: 500;
 
     @include tablets {
       display:none;
@@ -32,6 +30,7 @@
 
   }
   .navbar__list {
+    text-align: center;
     display: flex;
     align-items: center;
   }
@@ -54,19 +53,4 @@
     @include tablets{
       display: none;
     }
-  }
-  .phone {
-    font-size: rem(24px);
-    color: #fff;
-    z-index: 500;
-
-  
-  }
-
-
-  .phone__img{
-    width:12px;
-    height:12px;
-    fill:#fff;
-    margin-right:5px;
   }

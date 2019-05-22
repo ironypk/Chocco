@@ -1,11 +1,24 @@
-@import "fonts";
+
+//resolutions
+
+$tablets: 768px;
+$phones :480px;
+
+//normalize
+@import "normalize";
+
+// media
 @import "media";
+
+// setups
+@import "fonts";
 @import "base";
 @import "mixin";
 
-
+//blocks
 @import "introduction";
 @import "header";
+@import "phone";
 @import "hamburger-menu-link";
 @import "order";
 @import "product-features";

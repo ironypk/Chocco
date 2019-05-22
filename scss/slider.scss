@@ -6,21 +6,161 @@
       height:rem(112px);
       position: absolute;
       right:0;
-      bottom:-30px;
-      background: url('../img/slider__berry.png') center center no-repeat;
-      background-size:cover;
+      bottom:-50px;
+      background: url('../img/slider__berry.png');
+      @include cover;
   }
 }
 
 .slider-container {
+  padding-top:rem(130px);
+  padding-bottom: rem(100px);
   align-items: center;
   justify-content: center;
+}
+
+
+.slider__item {
+  display: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
   @include tablets{
-    padding-top: rem(130px);
-    padding-bottom: rem(110px)
+    flex-direction: column;
   }
 }
 
+.slider__item--active {
+  display: flex;
+  
+}
+
+
+//left-col
+
+.slider__left-col {
+  margin-right: rem(90px);
+  position: relative;
+
+  @include tablets {
+    margin-right:0;
+    margin-bottom: rem(90px);
+
+  }
+}
+
+.slider__left-col{
+  max-width:rem(363px);
+}
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: rem(462px);
+  //   height: rem(326px);
+  //   background: url("../img/slider__leaf.png");
+  //   @include cover;
+  //   left:0;
+  //   bottom:0;
+  
+  // }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: rem(462px);
+  //   height: rem(326px);
+  //   background: url("../img/seaweed__back.png");
+  //   @include cover;
+  //   left:0;
+  //   bottom:0;
+  // }
+
+//right-col
+
+
+.slider__right-col {
+  width:45%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets{
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.slider__right-col h3 {
+  font-size: rem(36px);
+  color: #0d0d0d;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.slider__right-col .composition {
+  font-size: rem(24px);
+  font-weight: 500;
+  color: #323232;
+  margin-bottom: rem(30px);
+}
+
+.slider__right-col p {
+  font-size: rem(18px);
+  color: #666666;
+  margin-bottom: rem(50px);
+}
+
+//nutritional value
+
+.nutritional-value {
+  display: flex;
+  text-align: left;
+  margin-bottom: rem(35px);
+}
+
+
+.nutritional-value__item span{
+  display: block;
+}
+
+.nutritional-value__item span:not(:last-child) {
+  margin-bottom: rem(5px);
+}
+
+.nutritional-value__item span:last-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.nutritional-value__item:not(:last-child) {
+  margin-right: rem(50px);
+}
+
+
+//Button-row
+
+
+.slider__btn-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.slider__btn-wrapper div {
+  display: block;
+  font-size: rem(60px);
+  font-weight: 300;
+  color: #0d0d0d;
+  margin-right: rem(30px);
+}
+
+.slider__btn {
+  color: #fff;
+  background-color: #0f5a47;
+}
+
+
+//Arrow
 
 .slider__arrow{
   width:rem(30px);
@@ -34,7 +174,7 @@
 
 
   @include tablets{
-    top:25%;
+    top:20%;
   }
   
   
@@ -48,118 +188,4 @@
 .arrow-right{
   right:rem(30px);
   transform: rotate(-135deg)
-}
-
-.slider__item {
-  display: none;
-  position: relative;
-}
-
-.slider__item--active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include tablets{
-    flex-direction: column;
-  }
-}
-
-.slider__img {
-  margin-right: rem(90px);
-  position: relative;
-
-  @include tablets {
-    margin-right:0;
-    margin-bottom: rem(90px);
-  }
-}
-
-.slider__img::after {
-  content: "";
-  position: absolute;
-  width: 462px;
-  height: 326px;
-  background: url("../img/slider__leaf.png") center center no-repeat;
-  z-index: -100;
-  left: rem(-60px);
-  bottom: rem(-20px);
-}
-
-.seaweed-img {
-  width: 380px;
-  height: 309px;
-  background: url("../img/seaweed__back.png") center center no-repeat;
-}
-
-.seaweed-img img {
-  position: relative;
-  top: -75px;
-  left: -8px;
-}
-
-
-.slider__description {
-  width: rem(370px);
-  display: flex;
-  flex-direction: column;
-
-  @include tablets{
-    align-items: center;
-    text-align: center;
-  }
-}
-
-.slider__description h3 {
-  font-size: rem(36px);
-  color: #0d0d0d;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.slider__description .composition {
-  font-size: rem(24px);
-  font-weight: 500;
-  color: #323232;
-  margin-bottom: rem(30px);
-}
-
-.slider__description p {
-  font-size: rem(18px);
-  color: #666666;
-  margin-bottom: rem(50px);
-}
-
-.nutritional-value {
-  display: flex;
-  margin-bottom: rem(35px);
-}
-
-.nutritional-value__item div:not(:last-child) {
-  margin-bottom: rem(5px);
-}
-
-.nutritional-value__item div:last-child {
-  font-weight: bold;
-  color: #333;
-}
-
-.nutritional-value__item:not(:last-child) {
-  margin-right: rem(50px);
-}
-
-.slider__btn-wrapper {
-  display: flex;
-}
-
-.slider__btn-wrapper div {
-  font-size: rem(60px);
-  font-weight: 300;
-  color: #0d0d0d;
-  margin-right: rem(30px);
-}
-
-.slider__btn {
-  color: #fff;
-  background-color: #0f5a47;
 }

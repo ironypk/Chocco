@@ -27,6 +27,10 @@
     bottom:rem(107px);
     right:0;
     @include cover;
+
+    @include tablets{
+      display: none;
+    }
   }
 }
 
@@ -44,6 +48,10 @@
       bottom:rem(56px);
       left:rem(12px);
       @include cover;
+
+      @include tablets{
+        display: none;
+      }
     }
 }
 

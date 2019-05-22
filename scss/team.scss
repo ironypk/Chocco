@@ -1,6 +1,9 @@
 .team__container {
-  padding: rem(80px) 0 ;
   align-items: center;
+  @include tablets{
+    padding-top:rem(100px);
+    padding-bottom:rem(100px);
+  }
 }
 
 .team__title {
