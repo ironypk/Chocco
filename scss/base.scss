@@ -30,6 +30,9 @@ body{
     -moz-osx-font-smoothing: grayscale;
 }
 
+.locked{
+    overflow: hidden;
+}
 
 
 a{
@@ -68,7 +71,7 @@ p{
     position: relative;
 
     @include tablets{
-        height:initial;
+    min-height:0;
     }
     
     }

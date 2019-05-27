@@ -1,13 +1,13 @@
 .team__container {
   align-items: center;
-  @include tablets{
-    padding-top:rem(100px);
-    padding-bottom:rem(100px);
-  }
+  justify-content: center;
 }
 
 .team__title {
   margin-bottom: rem(65px);
+  @include tablets{
+    margin-bottom: rem(10px);
+  }
 }
 
 .team__list {
@@ -15,9 +15,9 @@
 
   @include tablets{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-row-gap: 35px;
+    grid-template-columns:150px 150px;
+    grid-template-rows:auto auto;
+    grid-row-gap: 10px;
     grid-column-gap:15px;
   }
 }
@@ -45,10 +45,11 @@
 
 .team__img {
   margin-bottom: rem(25px);
+  @include tablets{
+    margin-bottom:rem(5px);
+  }
 
 }
-
-
 .name {
   display: block;
   position: relative;
@@ -57,6 +58,11 @@
   color: #323232;
   margin-right: rem(5px);
   margin-bottom: rem(13px);
+
+  @include tablets{
+    font-size: rem(18px);
+    margin-bottom: rem(5px);
+  }
 }
 
 .name::after {
@@ -94,5 +100,5 @@
 .team__accordion p {
   font-size: rem(18px);
   font-weight: 300;
-  color: #666666;
+  color: #111111;
 }

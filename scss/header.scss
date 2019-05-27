@@ -6,6 +6,7 @@
     z-index:50;
 
     @include tablets{
+      padding-top:rem(10px);
       padding-right:rem(10px);
       padding-left: rem(10px);
       width:100%;

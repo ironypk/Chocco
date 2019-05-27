@@ -1,7 +1,6 @@
 .introduction {
   background:url("../img/introduction__pattern.png") right bottom no-repeat;
   background-color:#61c4d9;
-  background-size: contain;
   @include tablets {
     background-position-y:top;
   }
@@ -55,22 +54,22 @@
   z-index:0;
 
   @include tablets {
-    max-width:rem(400px);
-    max-height:rem(420px);
+    max-width:rem(300px);
+    max-height:rem(320px);
     position: relative;
     right:0;
     top:0;
-    margin-bottom:rem(70px);
+    // margin-bottom:rem(70px);
 
-      &:before{
-      content:"";
-      position:absolute;
-      width: rem(500px);
-      height: rem(330px);
-      background: url("../img/img_768/one_leaf.png") rem(50px) rem(112px) no-repeat, url("../img/img_768/four_leaf.png") rem(215px) center no-repeat,  url("../img/img_768/ягоды.png") center center no-repeat;
-      bottom:rem(-30px);
-      right:rem(-40px);
-    }
+    //   &:before{
+    //   content:"";
+    //   position:absolute;
+    //   width: rem(500px);
+    //   height: rem(330px);
+    //   background: url("../img/img_768/one_leaf.png") rem(50px) rem(112px) no-repeat, url("../img/img_768/four_leaf.png") rem(215px) center no-repeat,  url("../img/img_768/ягоды.png") center center no-repeat;
+    //   bottom:rem(-30px);
+    //   right:rem(-40px);
+    // }
       
     }
   }
