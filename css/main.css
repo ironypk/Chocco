@@ -566,6 +566,9 @@ img {
   font-weight: 700;
   font-size: 3rem;
   color: #0d0d0d; }
+  @media screen and (max-width: 768px) {
+    .section-title {
+      font-size: 2.375rem; } }
 
 .introduction {
   background: url("../img/introduction__pattern.png") right bottom no-repeat;
@@ -610,7 +613,8 @@ img {
     .introduction__container {
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      padding-bottom: 1.875rem; }
       .introduction__container::after, .introduction__container::before {
         display: none; } }
 
@@ -624,11 +628,29 @@ img {
   z-index: 0; }
   @media screen and (max-width: 768px) {
     .introduction__chocco {
-      max-width: 18.75rem;
-      max-height: 20rem;
+      width: 18.75rem;
+      height: 20rem;
       position: relative;
       right: 0;
-      top: 0; } }
+      top: -2.5rem; }
+      .introduction__chocco:before {
+        content: "";
+        position: absolute;
+        width: 3.125rem;
+        height: 5.625rem;
+        background: url("../img/img_768/one_leaf.png") center center no-repeat;
+        background-size: contain;
+        left: 0;
+        bottom: 1.875rem; }
+      .introduction__chocco:after {
+        content: "";
+        position: absolute;
+        width: 20rem;
+        height: 17rem;
+        background: url("../img/img_768/ягоды.png") center center no-repeat, url("../img/img_768/four_leaf.png") 80px center no-repeat;
+        background-size: contain;
+        bottom: -1.25rem;
+        right: -0.625rem; } }
 
 .header {
   padding-top: 1.5625rem;
@@ -758,7 +780,11 @@ img {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      text-align: center; } }
+      text-align: center;
+      margin-bottom: 0.625rem; } }
+  @media screen and (max-width: 480px) {
+    .order {
+      width: 80%; } }
 
 .order__head {
   font-weight: 700;
@@ -769,7 +795,7 @@ img {
   @media screen and (max-width: 768px) {
     .order__head {
       font-size: 2.375rem;
-      margin-bottom: 0.3125rem; } }
+      margin-bottom: 0; } }
 
 .order__description {
   font-size: 1.3125rem;
@@ -822,12 +848,12 @@ img {
   text-align: center; }
   .feature::after {
     content: "";
-    width: 10.0625rem;
-    height: 19.6875rem;
+    width: 7.5rem;
+    height: 13.75rem;
     position: absolute;
     background: url("../img/raspeberry.png");
     left: 0;
-    bottom: -9.375rem;
+    bottom: -6.25rem;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
@@ -989,7 +1015,7 @@ img {
   width: 45%; }
   @media screen and (max-width: 768px) {
     .slider-col {
-      width: 60%; } }
+      width: 80%; } }
 
 .slider__left-col {
   display: -webkit-box;
@@ -998,16 +1024,16 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-right: 5.625rem;
-  position: relative; }
+  margin-right: 5.625rem; }
   @media screen and (max-width: 768px) {
     .slider__left-col {
       margin-right: 0;
       margin-bottom: 1.25rem; } }
 
 @media screen and (max-width: 768px) {
-  .slider-pic {
-    height: 18.75rem; } }
+  .slider__left-col img {
+    max-height: 15.625rem;
+    max-width: 12.5rem; } }
 
 .slider__right-col {
   display: -webkit-box;
@@ -1541,8 +1567,8 @@ img {
     @media screen and (max-width: 768px) {
       .form::after {
         top: -5rem;
-        width: 10rem;
-        height: 11.25rem; } }
+        width: 8.75rem;
+        height: 10rem; } }
   .form::before {
     content: "";
     position: absolute;
@@ -1665,7 +1691,7 @@ img {
   resize: none; }
   @media screen and (max-width: 768px) {
     .form-input_textarea {
-      height: 6.25rem; } }
+      height: 8.125rem; } }
 
 @media screen and (max-width: 768px) {
   .form-button_wrapper {
@@ -1946,3 +1972,8 @@ img {
   font-size: 1.1875rem;
   border-radius: 2.1875rem;
   font-weight: 800; }
+  @media screen and (max-width: 768px) {
+    .btn {
+      padding: 1.25rem 1.875rem;
+      font-size: 1.125rem;
+      border-radius: 1.875rem; } }

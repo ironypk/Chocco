@@ -2,12 +2,12 @@
   text-align: center;
   &::after {
     content: "";
-    width: rem(161px);
-    height: rem(315px);
+    width: rem(120px);
+    height: rem(220px);
     position: absolute;
     background: url("../img/raspeberry.png");
     left: 0;
-    bottom: rem(-150px);
+    bottom: rem(-100px);
     @include cover;
   }
 }

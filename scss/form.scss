@@ -18,8 +18,8 @@
     @include cover;
     @include tablets{
       top:rem(-80px);
-      width: rem(160px);
-      height: rem(180px);
+      width: rem(140px);
+      height: rem(160px);
     }
   }
 
@@ -174,7 +174,7 @@
   resize:none;
 
   @include tablets{
-    height: rem(100px)
+    height: rem(130px)
   }
 }
 

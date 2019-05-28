@@ -111,6 +111,9 @@ img{
     font-weight: 700;
     font-size: rem(48px);
     color: #0d0d0d;
+    @include tablets{
+        font-size: rem(38px);
+    }
   }
 
 

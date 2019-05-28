@@ -43,7 +43,7 @@
 .slider-col{
   width:45%;
   @include tablets {
-    width:60%;
+    width:80%;
   }
 }
 
@@ -54,7 +54,6 @@
   display: flex;
   justify-content: center;
   margin-right: rem(90px);
-  position: relative;
 
   @include tablets {
     margin-right:0;
@@ -62,9 +61,10 @@
   }
 }
 
-.slider-pic{
+.slider__left-col img{
   @include tablets{
-    height:rem(300px);
+    max-height:rem(250px);
+    max-width:rem(200px);
   }
 }
 

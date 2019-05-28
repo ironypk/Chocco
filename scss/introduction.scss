@@ -37,6 +37,7 @@
 
   @include tablets {
     align-items: center;
+    padding-bottom: rem(30px);
     &::after, &::before{
       display: none;
     }
@@ -54,22 +55,33 @@
   z-index:0;
 
   @include tablets {
-    max-width:rem(300px);
-    max-height:rem(320px);
+    width:rem(300px);
+    height:rem(320px);
     position: relative;
     right:0;
-    top:0;
-    // margin-bottom:rem(70px);
+    top:rem(-40px);
+      &:before{
+      content:"";
+      position:absolute;
+      width: rem(50px);
+      height: rem(90px);
+      background: url("../img/img_768/one_leaf.png") center center no-repeat;
+      background-size: contain;
+      left:0;
+      bottom:rem(30px);
+    }
 
-    //   &:before{
-    //   content:"";
-    //   position:absolute;
-    //   width: rem(500px);
-    //   height: rem(330px);
-    //   background: url("../img/img_768/one_leaf.png") rem(50px) rem(112px) no-repeat, url("../img/img_768/four_leaf.png") rem(215px) center no-repeat,  url("../img/img_768/ягоды.png") center center no-repeat;
-    //   bottom:rem(-30px);
-    //   right:rem(-40px);
-    // }
+    &:after{
+      content:"";
+      position: absolute;
+      width:rem(320px);
+      height:rem(272px);
+      background:url("../img/img_768/ягоды.png") center center no-repeat, url("../img/img_768/four_leaf.png") 80px center no-repeat;
+      background-size: contain;
+      bottom:rem(-20px);
+      right:rem(-10px);
+
+    }
       
     }
   }
