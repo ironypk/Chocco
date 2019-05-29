@@ -6,19 +6,21 @@
 .team__title {
   margin-bottom: rem(65px);
   @include tablets{
-    margin-bottom: rem(10px);
+    font-size: rem(30px);
+    margin-bottom: rem(5px);
   }
 }
 
 .team__list {
   display: flex;
+  z-index: 20;
 
   @include tablets{
     display:grid;
-    grid-template-columns:150px 150px;
+    grid-template-columns:rem(150px) rem(150px);
     grid-template-rows:auto auto;
     grid-row-gap: 10px;
-    grid-column-gap:15px;
+    grid-column-gap:rem(15px);
   }
 }
 
@@ -46,9 +48,8 @@
 .team__img {
   margin-bottom: rem(25px);
   @include tablets{
-    margin-bottom:rem(5px);
+    margin-bottom:0;
   }
-
 }
 .name {
   display: block;
@@ -60,8 +61,8 @@
   margin-bottom: rem(13px);
 
   @include tablets{
-    font-size: rem(18px);
-    margin-bottom: rem(5px);
+    font-size: rem(16px);
+    margin-bottom: 0;
   }
 }
 
@@ -95,10 +96,18 @@
   font-weight: 500;
   color: #281e1e;
   margin-bottom: rem(5px);
+  @include tablets{
+    font-size: rem(16px);
+    margin-bottom: 0;
+  }
 }
 
 .team__accordion p {
   font-size: rem(18px);
   font-weight: 300;
   color: #111111;
+  @include tablets{
+    font-size: rem(14px);
+    margin-bottom: 0;
+  }
 }

@@ -114,6 +114,9 @@ img{
     @include tablets{
         font-size: rem(38px);
     }
+    @include tablets{
+        font-size: rem(30px);
+    }
   }
 
 

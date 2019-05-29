@@ -1,6 +1,7 @@
 .order {
     width: 50%;
     z-index:50;
+    padding-top:rem(50px);
 
     @include tablets{
       width:70%;
@@ -21,7 +22,7 @@
     line-height: 1;
     margin-bottom: rem(20px);
     @include tablets {
-      font-size:rem(38px);
+      font-size:rem(30px);
       margin-bottom: 0;
     }
   }
@@ -31,6 +32,7 @@
     color: #fff;
     margin-bottom: rem(30px);
     @include tablets {
+      font-size: rem(18px);
       margin-bottom:rem(5px);
     }
   }

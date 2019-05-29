@@ -15,7 +15,7 @@
   padding-top:rem(75px);
   padding-bottom:rem(75px);
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
   @include tablets{
     padding-top:rem(5px);
@@ -30,7 +30,7 @@
   margin-bottom: rem(85px);
 
   @include tablets{
-    margin-bottom: rem(5px);
+    margin-bottom: rem(20px);
   }
 
   @include phones{
@@ -41,7 +41,6 @@
 .feature__title {
   margin-bottom: rem(20px);
   @include tablets {
-    font-size:rem(38px);
     margin-bottom: rem(5px);
   }
 }
@@ -90,6 +89,9 @@
   @include tablets {
     margin-bottom: rem(5px);
   }
+  @include phones{
+    font-size: rem(18px);
+  }
 }
 
 .feature__item p {
@@ -98,6 +100,9 @@
   color: #666;
   @include tablets{
     font-size: rem(16px);
+  }
+  @include phones{
+    font-size: rem(14px);
   }
 }
 
@@ -108,8 +113,8 @@
   height: rem(70px);
   margin-bottom: rem(65px);
   @include tablets{
-    width: rem(50px);
-    height: rem(50px);
+    width: rem(40px);
+    height: rem(40px);
     margin-bottom: rem(10px);
   }
 }
