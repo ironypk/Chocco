@@ -5,8 +5,17 @@
 
 
 .rewiew-controls__item{
-    margin-right:40px;
+    width: rem(100px);
+    height: rem(100px);
     cursor: pointer;
+    @include phones{
+        width:rem(70px);
+        height:rem(70px);
+    }
+}
+
+.rewiew-controls__item:not(:last-child){
+    margin-right:rem(40px);
 }
 
 .rewiew-controls__item img{
@@ -17,4 +26,7 @@
 .rewiew-controls__item:hover img {
     box-shadow: 0 0 0 7px #0f5a47;
     transition:0.3s;
+    @include phones{
+        box-shadow: 0 0 0 4px #0f5a47;
+    }
 }

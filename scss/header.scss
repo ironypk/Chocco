@@ -1,52 +1,59 @@
 .header {
-    padding-top: 25px;
-    margin-bottom: 100px;
+    padding-top: rem(25px);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-  
+    z-index:50;
+
+    @include tablets{
+      padding-top:rem(10px);
+      padding-right:rem(10px);
+      padding-left: rem(10px);
+      width:100%;
+    }
   }
   
   .logo {
-    width:55px;
+    width:rem(55px);
     word-wrap: break-word;
     color: #fff;
     font-family: MuseoSansCyrl;
-    font-size: 24px;
+    font-size: rem(24px);
     line-height: 0.88;
-    margin-right: 25px;
+    margin-right:10px;
   }
 
   .navbar {
-    margin-right: 45px;
-    z-index: 500;
+    display: flex;
+    margin-right:5px;
+
+    @include tablets {
+      display:none;
+    }
+
   }
   .navbar__list {
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
   }
 
   .navbar__item:not(:last-child){
-    margin-right:30px;
+    margin-right:rem(20px);
   }
   
   .navbar__link {
-    font-size: 18px;
+    font-size: rem(18px);
     color: #fff;
   }
-  
-  .phone {
-    position: relative;
-    font-size: 24px;
-    color: #fff;
-    z-index: 500;
-  
-    &:before {
-      position: absolute;
-      content: "";
-      width: 12px;
-      height: 12px;
-      background: url("../img/phone.png") center center no-repeat;
-      top: 7px;
-      left: -20px;
+
+  .phone-wrapper{
+    display:flex;
+    align-items: center;
+  }
+
+  .header-phone_wrapper{
+    @include tablets{
+      display: none;
     }
   }

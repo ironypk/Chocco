@@ -3,28 +3,44 @@
     content: "";
     position: absolute;
     background: url("../img/rewiews__strawberry.png") center center no-repeat;
-    width: 173px;
-    height: 99px;
-    top: -80px;
-    right: 0;
+    width:30%;
+    height:30%;
+    max-width: rem(173px);
+    max-height: rem(99px);
+    top:0;
+    right:0;
+    background-size: contain;
+    @include tablets{
+      right:rem(-35px);
+      }
   }
-}
-
-.rewiews__container {
-  align-items: center;
 
   &::before {
     content: "";
     position: absolute;
     background: url("../img/rewiews__anyberry.png") center center no-repeat;
-    width: 154px;
-    height: 200px;
-    bottom: -180px;
+    height:20%;
+    width:20%;
+    max-width: rem(154px);
+    max-height: rem(224px);
+    bottom: 0;
     left: 0;
+    background-size: contain;
+    @include tablets{
+    left:rem(-40px);
+    }
   }
+}
+
+.rewiews__container {
+  justify-content: space-evenly;
+  align-items:center;
 }
 
 .rewiews__title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: rem(60px);
+  @include tablets{
+    margin-bottom: 0;
+  }
 }

@@ -1,0 +1,15 @@
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.social__item:not(:last-child) {
+  margin-right: rem(20px); }
+
+.social__link svg {
+  width: rem(25px);
+  height: rem(25px);
+  opacity: .5; }
+
+.social__link:hover svg {
+  opacity: 1; }

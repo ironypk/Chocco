@@ -2,13 +2,36 @@
     box-sizing:border-box;
 }
 
+html{
+    font-size:16px;
+
+    @include tablets{
+        font-size:15px;
+
+    }
+
+    @include phones{
+        font-size: 13px;
+    }
+}
+
+
 body,html{
     height: 100%;
+}
+
+body{
+    font-size:rem(16px);
+    line-height:1.42;
     font-family:AlegreyaSans;
     font-weight: 400;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.locked{
+    overflow: hidden;
 }
 
 
@@ -31,30 +54,41 @@ p{
     margin:0;
     padding:0;
 }
-.wrapper{
-    position: relative;
-    width:100%;
-    overflow: hidden;
 
-    section{
-    min-height:650px;
-    height:100vh;
+
+.wrapper{
+    width:100%;
+    min-height:100%;
     position: relative;
-    
-    }
+    overflow: hidden;
 }
 
-.container{
-    width:1100px;
-    padding-left:80px;
-    padding-right:80px;
+
+.section{
+    display: flex;
+    min-height:rem(650px);
+    height:100vh;
     position: relative;
-    height:100%;
+
+    @include tablets{
+    min-height:0;
+    }
+    
+    }
+
+.container{
+    width:100%;
+    max-width:1100px;
+    padding:0 rem(80px);
+    position: relative;
     margin:0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    z-index:1000;
+
+    @include tablets{
+
+        padding:0 rem(10px);
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,8 +107,16 @@ img{
 
 
 .section-title {
+    text-align: center;
     font-weight: 700;
-    font-size: 48px;
+    font-size: rem(48px);
     color: #0d0d0d;
+    @include tablets{
+        font-size: rem(38px);
+    }
+    @include tablets{
+        font-size: rem(30px);
+    }
   }
+
 
