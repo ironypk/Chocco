@@ -27,5 +27,9 @@
 
 .fixed-navbar__link{
     color:#fff;
+    transition: .5s;
+    &:hover{
+        color:#61c4d9;
+    }
 }
 

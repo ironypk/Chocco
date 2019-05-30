@@ -2021,7 +2021,12 @@ img {
   margin-bottom: 20px; }
 
 .fixed-navbar__link {
-  color: #fff; }
+  color: #fff;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .fixed-navbar__link:hover {
+    color: #61c4d9; }
 
 .btn {
   display: block;
