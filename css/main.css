@@ -1950,6 +1950,9 @@ img {
   z-index: 1000;
   top: 32.7%;
   right: 4.1%; }
+  @media screen and (max-width: 768px) {
+    .fixed-menu {
+      display: none; } }
 
 .fixed-menu__item {
   margin-bottom: 0.3125rem; }
@@ -2000,10 +2003,10 @@ img {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(47, 50, 52, 0.99);
-  padding-top: 9.375rem; }
+  background-color: rgba(47, 50, 52, 0.99); }
 
 .fixed-navbar__list {
+  height: 100vh;
   font-size: 2.25rem;
   line-height: 2;
   display: -webkit-box;
@@ -2015,10 +2018,19 @@ img {
   flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media screen and (max-width: 480px) {
+    .fixed-navbar__list {
+      font-size: 1.875rem; } }
 
 .fixed-navbar__item:not(:last-child) {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25rem; }
+  @media screen and (max-width: 480px) {
+    .fixed-navbar__item:not(:last-child) {
+      margin-bottom: 0.625rem; } }
 
 .fixed-navbar__link {
   color: #fff;

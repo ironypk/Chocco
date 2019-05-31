@@ -3,6 +3,9 @@
     z-index: 1000;
     top:32.7%;
     right:4.1%;
+    @include tablets{
+        display: none;
+    }
 }
 
 .fixed-menu__item{
