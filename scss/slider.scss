@@ -38,7 +38,6 @@
 
 .slider__item--active {
   display: flex;
-  
 }
 
 
@@ -53,6 +52,9 @@
 //left-col
 
 .slider__left-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: rem(90px);
 
   @include tablets {
@@ -205,6 +207,7 @@
   border-bottom:rem(3px) solid black;
   border-bottom-left-radius: rem(6px);
   cursor: pointer;
+  z-index: 100;
 
 
   @include tablets{
