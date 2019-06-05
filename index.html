@@ -323,7 +323,7 @@
       <section id="menu" class="section menu">
         <h2 class="section-title menu__title">МЕНЮ</h2>
         <ul class="menu__list">
-          <li class="menu__item menu__item--active">
+          <li class="menu__item">
             <a class="menu__block menu__milk">
               <span>Батончики с молоком</span>
             </a>
@@ -470,7 +470,7 @@
   
                   <label class="form-label form-label_tel">
                     <div class="form-label__title">Телефон</div>
-                    <input class="form__input" name="telephone" type="number" required />
+                    <input class="form__input" name="telephone" type="tel" required />
                     <div class="error"></div>
                   </label>
                 </div>
@@ -486,7 +486,7 @@
                 <div class="form__block-row form__block-row_four">
                   <label class="form-label form-label_dom">
                     <div class="form-label__title">Дом</div>
-                    <input class="form__input" name="dom" type="number" required>
+                    <input class="form__input" name="dom" type="text" required>
                     <div class="error"></div>
                   </label>
   
@@ -497,13 +497,13 @@
   
                   <label class="form-label form-label_flat">
                     <div class="form-label__title">Квартира</div>
-                    <input class="form__input" name="flat" type="number" required />
+                    <input class="form__input" name="flat" type="text"/>
                     <div class="error"></div>
                   </label>
   
                   <label class="form-label form-label_floor">
                     <div class="form-label__title">Этаж</div>
-                    <input class="form__input" name="floor" type="number" />
+                    <input class="form__input" name="floor" type="text" />
                     <div class="error"></div>
                   </label>
                 </div>
@@ -521,7 +521,7 @@
     
                 <div class="form-button_wrapper">
                   <div class="form__block-row">
-                    <input type="radio" name="radio" class="radio" id="radio-1" required />
+                    <input type="radio" name="radio" class="radio" id="radio-1" checked />
                     <label class="form-controls__label" for="radio-1"
                       >Потребуется сдача</label
                     >

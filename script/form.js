@@ -59,14 +59,31 @@ formBtn.addEventListener("click", function(e) {
       if (xhr.response.status == 1) {
         formOverlay.style.display = "block";
         document.body.classList.add("locked");
+        myForm.reset();
       } else if (xhr.response.status == 0) {
         alert(xhr.response.message);
-      } else{
-          alert('Неудача');
+      } else {
+        alert("Неудача");
       }
     });
   }
 });
+
+myForm.elements.telephone.onkeypress = function(e) {
+  let char = e;
+  char = false;
+  if (!(e.keyCode < 48 || e.keyCode > 57)) {
+    char = true;
+  } else if (e.keyCode == 40 || e.keyCode == 41) {
+    char = true;
+  } else if (e.keyCode == 45 || e.keyCode == 43) {
+    char = true;
+  } else {
+    char = false;
+  }
+
+  return char;
+};
 
 function validateForm(form) {
   let valid = true;
@@ -82,12 +99,6 @@ function validateForm(form) {
     valid = false;
   }
   if (!validateField(form.elements.dom)) {
-    valid = false;
-  }
-  if (!validateField(form.elements.flat)) {
-    valid = false;
-  }
-  if (!validateField(form.elements.floor)) {
     valid = false;
   }
 
