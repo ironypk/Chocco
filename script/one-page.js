@@ -10,7 +10,7 @@ var scrollStatus = {
 var scrollTimer = false;
 
 for (let i = 0; i < section.length; i++) {
-  section[i].addEventListener("wheel", function(e) {
+  section[i].addEventListener("mousewheel", function(e) {
     let sectionHeight = parseInt(getComputedStyle(this).height);
     let startPosition = window.pageYOffset;
     let distanceDown = startPosition + sectionHeight;
