@@ -10,7 +10,7 @@ var scrollStatus = {
 var scrollTimer = false;
 
 for (let i = 0; i < section.length; i++) {
-  section[i].addEventListener("mousewheel", function(e) {
+  section[i].addEventListener("touchmove", function(e) {
     let sectionHeight = parseInt(getComputedStyle(this).height);
     let startPosition = window.pageYOffset;
     let distanceDown = startPosition + sectionHeight;
@@ -41,3 +41,5 @@ for (let i = 0; i < section.length; i++) {
     }, 300);
   });
 }
+
+addEventListener('to')
