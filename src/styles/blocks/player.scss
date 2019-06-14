@@ -119,6 +119,10 @@
     }
 }
 
+.player__duration span{
+    width:rem(30px);
+}
+
 .player_volume{
     display: flex;
     align-items: center;
