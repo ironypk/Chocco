@@ -4,6 +4,10 @@
 let fixedNavbar = document.querySelector(".fixed-navbar");
 let hamburger = document.querySelector(".hamburger-menu-link");
 
+fixedNavbar.addEventListener('wheel', ()=>{
+  return false;
+});
+
 hamburger.addEventListener("click", function(e) {
   e.preventDefault();
   fixedNavbar.style.display = "block";

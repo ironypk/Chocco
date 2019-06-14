@@ -60,7 +60,9 @@
     wheel: e =>{
       let deltaY = e.originalEvent.deltaY;
       let direction = deltaY >0 ? 'next' :'prev';
+      if(!$('body').hasClass("locked")){
       scrollToSection(direction);
+      }
     },
     touchmove: e=> e.preventDefault()
   });
@@ -88,7 +90,9 @@ if(isMobile){
   $(window).swipe({
     swipe:function(event,direction,distance,duration,fingerCount,fingerData){
       let nextorPrev = direction === 'up' ? 'next' : 'prev';
-      scrollToSection(nextorPrev)
+      if(!$('body').hasClass("locked")){
+      scrollToSection(nextorPrev);
+      }
     }
   });
 }

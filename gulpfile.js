@@ -13,6 +13,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
+const svgo = require ('gulp-svgo');
+const svgSprite = require('gulp-svg-sprite')
+
 
 const env = process.env.NODE_ENV;
 
@@ -79,10 +82,7 @@ task('scripts', ()=>{
     .pipe(reload({stream:true}));
 });
 
-task('spriteicons',()=>{
-    return src (`${SRC_PATH}/images/spriteicons/*`)
-    .pipe(dest(`${DIST_PATH}/images/spriteicons`));
-})
+
 task('pic',()=>{
     return src (`${SRC_PATH}/images/pic/**/*`)
     .pipe(dest(`${DIST_PATH}/images/pic`));
@@ -98,9 +98,32 @@ task('server', ()=> {
     browserSync.init({
         server: {
             baseDir: `./${DIST_PATH}`
-        }    
+        }
     });
 });
+
+
+task('icons', ()=>{
+    return src(`${SRC_PATH}/images/icons/*.svg`)
+    .pipe(svgo({
+        plugins:[
+            {
+                removeAttrs:{
+                    attrs:'(fill|stroke|style|width|height|data.*)'
+                }
+            }
+        ]
+    })
+    )
+    .pipe(svgSprite({
+        mode:{
+            symbol:{
+                sprite:'../sprite.svg'
+            }
+        }
+    }))
+    .pipe(dest(`${DIST_PATH}/images/icons`))
+})
 
 
 
@@ -113,12 +136,13 @@ watch(`./${SRC_PATH}/*.html`, series('copy:html'));
 watch(`./${SRC_PATH}/scripts/*.js`, series('scripts'));
 watch(`./${SRC_PATH}/images/pic/**/*`, series('pic'));
 watch(`./${SRC_PATH}/fonts/*`, series('fonts'));
+watch(`./${SRC_PATH}/images/icons/*.svg`, series('icons'));
 });
 
 
 task('default',
  series('clean',
-  parallel('copy:html', 'styles' , 'fonts', 'scripts', 'spriteicons', 'pic'),
+  parallel('copy:html', 'styles' , 'fonts', 'scripts', 'icons', 'pic'),
   parallel('watch', 'server')
   )
 );
@@ -126,5 +150,5 @@ task('default',
 
 task(
     'build',
-     parallel('copy:html', 'styles' , 'fonts', 'scripts', 'spriteicons', 'pic')
+     parallel('copy:html', 'styles' , 'fonts', 'scripts', 'icons', 'pic')
 );
