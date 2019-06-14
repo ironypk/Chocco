@@ -1,0 +1,42 @@
+.fixed-navbar{
+    display: none;
+    position: absolute;
+    z-index :9999;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background-color: rgba( #2f3234, .99);
+}
+
+
+.fixed-navbar__list{
+    height:100vh;
+    font-size:rem(36px);
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include phones{
+        font-size:rem(30px);
+    }
+}
+
+
+.fixed-navbar__item:not(:last-child){
+    margin-bottom: rem(20px);
+    @include phones{
+        margin-bottom:rem(10px);
+    }
+}
+
+
+.fixed-navbar__link{
+    color:#fff;
+    transition: .5s;
+    &:hover{
+        color:#61c4d9;
+    }
+}
+

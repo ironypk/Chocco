@@ -1,0 +1,15 @@
+.btn {
+    display: block;
+    border:none;
+    text-decoration:none;
+    padding:rem(24px) rem(35px);
+    font-size:rem(19px);
+    border-radius:rem(35px);
+    font-weight: 800;
+
+    @include tablets{
+      padding:rem(20px) rem(30px);
+       font-size:rem(18px);
+      border-radius:rem(30px);
+    }
+  }

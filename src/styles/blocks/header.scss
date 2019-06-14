@@ -1,0 +1,56 @@
+.header {
+    padding-top: rem(25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:50;
+
+    @include tablets{
+      padding-top:rem(10px);
+      padding-right:rem(10px);
+      padding-left: rem(10px);
+      width:100%;
+    }
+  }
+  
+  .logo {
+    width:rem(55px);
+    word-wrap: break-word;
+    color: #fff;
+    font-family: MuseoSansCyrl;
+    font-size: rem(24px);
+    line-height: 0.88;
+    margin-right:10px;
+  }
+
+  .navbar {
+    display: flex;
+    margin-right:5px;
+
+    @include tablets {
+      display:none;
+    }
+
+  }
+  .navbar__list {
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__item:not(:last-child){
+    margin-right:rem(20px);
+  }
+  
+  .navbar__link {
+    font-size: rem(18px);
+    color: #fff;
+  }
+
+  .header-phone{
+    display:flex;
+    align-items: center;
+    @include tablets{
+      display: none;
+    }
+  }
